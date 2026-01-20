@@ -1,0 +1,11 @@
+/* src/components/OnboardingMolecule3D.css */
+
+.onboarding-node-card {
+    background-color: rgba(255, 255, 255, .5);
+    color: black;
+    position: absolute;
+    max-width: 300px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid rgba(107, 224, 202, 0.5);
+}

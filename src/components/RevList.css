@@ -1,0 +1,22 @@
+.rev-list {
+    width: 33vw;
+    max-width: 250px;
+    position: relative;
+    height: 60vh;
+    padding: 2vh;
+    border-radius: 12px;
+    margin-top: 12px;
+    top: 70px;
+
+}
+
+.rev-list-items {
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}

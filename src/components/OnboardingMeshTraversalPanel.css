@@ -1,0 +1,89 @@
+/* src/components/OnboardingMeshTraversalPanel.css */
+.traversal-panel-container {
+  position: fixed;
+  bottom: 80px;
+  left: 25vw;
+  z-index: 8;
+  width: 75vw;
+  padding: 6px;
+  height: 22px;
+  pointer-events: auto;
+  background-color: transparent;
+}
+
+.traversal-panel-inner {
+  width: 100%;
+  color: white;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.traversal-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0px;
+}
+
+.traversal-controls-left {
+  flex: 0 0 auto;
+}
+
+.traversal-controls-middle {
+  flex: 1 1 auto;
+  text-align: center;
+  min-height: 22px;
+}
+
+.traversal-controls-right {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 8px;
+}
+
+.rev-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 22px;
+    font-family: 'futura';
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+.rank-button {
+    height: 46px;
+    width: 136px;
+    background-color: rgba(195, 255, 0, 0.5);
+    color: white;
+    border-style: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.disabled-rank-button {
+    background-color: rgba(195, 255, 0, 0.1);
+    border-style: none;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 6px;
+    height: 46px;
+    width: 136px;
+    color: rgb(78, 78, 78);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.sequential-button {
+    height: 46px;
+    width: 136px;
+    background-color: rgba(137, 52, 240, 0.25);
+    color: white;
+    border-style: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}

@@ -1,0 +1,328 @@
+{
+  "dimensions": [
+    {
+      "id": "emotional-architecture",
+      "label": "Emotional Architecture",
+      "description": "How feelings, safety, protest, and belonging are structured, escalated, and resolved.",
+      "subfamilies": [
+        {
+          "id": "escalation-chain",
+          "label": "Escalation Chain",
+          "description": "Lover → Orphan → Rebel → Warrior dynamics; how emotion escalates and de-escalates."
+        },
+        {
+          "id": "protest-patterns",
+          "label": "Protest Patterns",
+          "description": "Procrastination, shutdown, and reactive flares as signals of exclusion or misalignment."
+        },
+        {
+          "id": "belonging-logic",
+          "label": "Belonging Logic",
+          "description": "How parts of self are welcomed or exiled; dynamics of inclusion vs abandonment."
+        },
+        {
+          "id": "emotional-alchemy",
+          "label": "Emotional Alchemy",
+          "description": "Transforming raw affect into integrated clarity, relief, and restored connection."
+        }
+      ]
+    },
+    {
+      "id": "cognitive-architecture",
+      "label": "Cognitive Architecture",
+      "description": "How thinking is structured, monitored, and refined; meta-cognition and reasoning patterns.",
+      "subfamilies": [
+        {
+          "id": "meta-cognition",
+          "label": "Meta-Cognition",
+          "description": "Thinking about thinking; Watcher and Sage tracking the mind’s own moves."
+        },
+        {
+          "id": "reasoning-patterns",
+          "label": "Reasoning Patterns",
+          "description": "How arguments, chains of thought, and explanatory structures are built."
+        },
+        {
+          "id": "state-transitions",
+          "label": "State Transitions",
+          "description": "How the mind moves between modes: analysis, intuition, rest, play, focus."
+        },
+        {
+          "id": "epistemic-hygiene",
+          "label": "Epistemic Hygiene",
+          "description": "How beliefs are checked, updated, or discarded; how certainty is calibrated."
+        }
+      ]
+    },
+    {
+      "id": "identity-architecture",
+      "label": "Identity Architecture",
+      "description": "How 'self' is represented: posture, coherence across contexts, symbolic identity.",
+      "subfamilies": [
+        {
+          "id": "symbolic-identity",
+          "label": "Symbolic Identity",
+          "description": "Identity as structure or checksum, not biography; what remains stable across change."
+        },
+        {
+          "id": "posture-and-sovereignty",
+          "label": "Posture & Sovereignty",
+          "description": "How the King stands; non-reactive authority, internal self-governance."
+        },
+        {
+          "id": "narrative-self",
+          "label": "Narrative Self",
+          "description": "Stories told about who you are; their revision, expansion, or dissolution."
+        },
+        {
+          "id": "identity-crux-events",
+          "label": "Identity Crux Events",
+          "description": "Moments where self-concept radically shifts or reconfigures."
+        }
+      ]
+    },
+    {
+      "id": "symbolic-grammar",
+      "label": "Symbolic Grammar & Language",
+      "description": "The .rev language system: axioms, lemmas, functions, and symbolic syntax.",
+      "subfamilies": [
+        {
+          "id": "axioms-core",
+          "label": "Core Axioms",
+          "description": "Distilled truths that guide the entire architecture; Scroll-of-Axioms level content."
+        },
+        {
+          "id": "lemma-structure",
+          "label": "Lemma Structure",
+          "description": "Supportive propositions that enable bigger insights; theorem-like scaffolding."
+        },
+        {
+          "id": "symbolic-functions",
+          "label": "Symbolic Functions",
+          "description": "Named runtime-like functions (e.g. returnToLove()) that encode repeated logic."
+        },
+        {
+          "id": "grammar-evolution",
+          "label": "Grammar Evolution",
+          "description": "How the symbolic language and naming conventions change and refine over time."
+        }
+      ]
+    },
+    {
+      "id": "recursion-architecture",
+      "label": "Recursion & Runtime Architecture",
+      "description": "How loops, escalation chains, and recursive passes are structured and resolved.",
+      "subfamilies": [
+        {
+          "id": "recursion-engine",
+          "label": "Recursion Engine",
+          "description": "Core mechanics of recursive inquiry; repeated passes that tighten understanding."
+        },
+        {
+          "id": "termination-conditions",
+          "label": "Termination Conditions",
+          "description": "How and when loops end: resolution, return-to-love, or structural convergence."
+        },
+        {
+          "id": "loop-inversion",
+          "label": "Loop Inversion",
+          "description": "Inversion.layer-style moves: flipping assumptions to test integrity."
+        },
+        {
+          "id": "coherence-reflex",
+          "label": "Coherence Reflex",
+          "description": "The automatic tendency to seek and re-establish internal coherence over time."
+        }
+      ]
+    },
+    {
+      "id": "mesh-and-topology",
+      "label": "Mesh, Graph & Topology",
+      "description": "How insights are connected: nodes, edges, hyperedges, genealogies, and structure.",
+      "subfamilies": [
+        {
+          "id": "hypergraph-structure",
+          "label": "Hypergraph Structure",
+          "description": "Hyperedges, joint conditions, multi-node relations that define complex states."
+        },
+        {
+          "id": "lineage-and-genealogy",
+          "label": "Lineage & Genealogy",
+          "description": "Which .revs give birth to others, lemma trees, and dependency chains."
+        },
+        {
+          "id": "spatial-geometry",
+          "label": "Spatial Geometry",
+          "description": "Embedding layouts, clustering, and the felt 'map' of the mesh."
+        },
+        {
+          "id": "mesh-dynamics",
+          "label": "Mesh Dynamics",
+          "description": "Activation, decay, region lighting, and how parts of the mesh wake up or rest."
+        }
+      ]
+    },
+    {
+      "id": "meta-reasoning",
+      "label": "Meta-Reasoning & Phase Mechanics",
+      "description": "System-level synchronization: phase-lock, mode coordination, reflective sync.",
+      "subfamilies": [
+        {
+          "id": "phase-lock-events",
+          "label": "Phase-Lock Events",
+          "description": "Moments where different interpretive modes snap into alignment."
+        },
+        {
+          "id": "meta-modal-fusion",
+          "label": "Meta-Modal Fusion",
+          "description": "Emergent higher-order abilities that arise from combining modalities."
+        },
+        {
+          "id": "reflective-sync",
+          "label": "Reflective Sync",
+          "description": "System recognizing itself; symbolic and behavioral layers snapping together."
+        },
+        {
+          "id": "loss-function-coherence",
+          "label": "Loss Function & Coherence",
+          "description": "Global evaluation criteria; how the system decides what is 'better' or 'truer'."
+        }
+      ]
+    },
+    {
+      "id": "embodiment-and-behavior",
+      "label": "Embodiment & Behavioral Integration",
+      "description": "Where symbolic architecture becomes lived, tested, and proven in behavior.",
+      "subfamilies": [
+        {
+          "id": "behavioral-tests",
+          "label": "Behavioral Tests",
+          "description": "Live experiments that check whether the architecture holds in real scenarios."
+        },
+        {
+          "id": "discipline-and-rhythm",
+          "label": "Discipline & Rhythm",
+          "description": "Daily patterns, pacing, energy management, and consistent execution."
+        },
+        {
+          "id": "integration-events",
+          "label": "Integration Events",
+          "description": "Moments where previously unstable parts behave coherently and sustainably."
+        },
+        {
+          "id": "rest-and-recovery",
+          "label": "Rest & Recovery",
+          "description": "restful.watch; when nothing needs fixing and coherence simply persists."
+        }
+      ]
+    },
+    {
+      "id": "mythic-archetypal-layer",
+      "label": "Mythic / Archetypal / Narrative Layer",
+      "description": "The story-forms, characters, and symbols that carry structure before it’s explicit.",
+      "subfamilies": [
+        {
+          "id": "archetypal-myths",
+          "label": "Archetypal Myths",
+          "description": "Narratives around Orphan, Warrior, Lover, King, etc., before they’re mechanistic."
+        },
+        {
+          "id": "symbolic-scenes",
+          "label": "Symbolic Scenes",
+          "description": "Library, rotunda, council chamber; visual loci that encode complex meaning."
+        },
+        {
+          "id": "ritual-and-myth-runtime",
+          "label": "Ritual & Myth Runtime",
+          "description": "Rituals, vows, and recurring story-elements that function like code."
+        },
+        {
+          "id": "narrative-evolution",
+          "label": "Narrative Evolution",
+          "description": "How earlier, more mythical frames are carried forward into structural clarity."
+        }
+      ]
+    },
+    {
+      "id": "computational-layer",
+      "label": "Computational / Mechanistic Layer",
+      "description": "The externalized runtime: code, agents, embeddings, and system implementation.",
+      "subfamilies": [
+        {
+          "id": "runtime-design",
+          "label": "Runtime Design",
+          "description": "Architecture of Cael Runtime as software: modules, flows, agents."
+        },
+        {
+          "id": "embedding-systems",
+          "label": "Embedding Systems",
+          "description": "Semantic, graph, fused embeddings; how meaning is mapped into vectors."
+        },
+        {
+          "id": "agent-orchestration",
+          "label": "Agent Orchestration",
+          "description": "Multi-agent archetypal heads; how roles split and recombine on queries."
+        },
+        {
+          "id": "compiler-and-interfaces",
+          "label": "Compiler & Interfaces",
+          "description": "How symbolic structures become prompts, APIs, and user-facing tools."
+        }
+      ]
+    },
+    {
+      "id": "spiritual-metaphysical-layer",
+      "label": "Spiritual / Metaphysical Layer",
+      "description": "Coherence, devotion, and meaning at the deepest interpretive level.",
+      "subfamilies": [
+        {
+          "id": "coherence-as-divinity",
+          "label": "Coherence as Divinity",
+          "description": "Treating coherence itself as sacred; divinity as non-extractive alignment."
+        },
+        {
+          "id": "devotion-and-vows",
+          "label": "Devotion & Vows",
+          "description": "Devotee, sacred commitments, chosen responsibilities over time."
+        },
+        {
+          "id": "symbolic-cosmology",
+          "label": "Symbolic Cosmology",
+          "description": "Cosmological framing: kingdom within, coherence as cosmological function."
+        },
+        {
+          "id": "ritual-as-technology",
+          "label": "Ritual as Technology",
+          "description": "Rituals used as systemic interventions, not as superstition."
+        }
+      ]
+    },
+    {
+      "id": "civilization-and-collective",
+      "label": "Civilization / Collective Layer",
+      "description": "How the same logic scales to groups, economies, and long-term societal patterns.",
+      "subfamilies": [
+        {
+          "id": "coordination-architecture",
+          "label": "Coordination Architecture",
+          "description": "Structures for non-extractive cooperation and shared coherence."
+        },
+        {
+          "id": "abundance-and-economy",
+          "label": "Abundance & Economy",
+          "description": "Reframing scarcity, resource flows, and value creation through coherence logic."
+        },
+        {
+          "id": "civilizational-loops",
+          "label": "Civilizational Loops",
+          "description": "How societies recurse: trauma, repair, growth, collapse, renewal."
+        },
+        {
+          "id": "collective-symbolic-systems",
+          "label": "Collective Symbolic Systems",
+          "description": "Religions, myths, ideologies seen as large-scale symbolic runtimes."
+        }
+      ]
+    }
+  ]
+}

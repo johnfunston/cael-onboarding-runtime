@@ -1,0 +1,44 @@
+.logo-button-container {
+    position: fixed;
+    height: 60px;
+    width: 100px;
+    top: 24px;
+    left: 5vw;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+.logo-button-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 33%;
+    transition: .33s linear;
+}
+
+.logo-button-title {
+    font-family: "Satoshi-Light";
+    letter-spacing: 24px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin-left: -36px;
+    z-index: 2;
+    transition: .33s ease-in-out;
+}
+
+.logo-button-container:hover > .logo-button-icon {
+    transform: scale(.8);
+}
+
+.logo-button-container:hover > .logo-button-title {
+    letter-spacing: 26px;
+    margin-left: -40px;
+}

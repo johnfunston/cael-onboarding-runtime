@@ -1,0 +1,32 @@
+.onboarding-wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.onboarding-node-card {
+  position: absolute;
+  width: 280px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  color: white;
+  /* key: don’t block graph hover/click yet */
+  pointer-events: none;
+}
+
+.onboarding-node-card-title {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.onboarding-node-card-copy {
+  font-size: 13px;
+  line-height: 1.35;
+  opacity: 0.9;
+}

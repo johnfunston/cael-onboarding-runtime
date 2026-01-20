@@ -1,0 +1,209 @@
+.rev-detail{
+    min-width: 375px;
+    max-width: 375px;
+    padding: 0;
+    height: 85vh;
+    top: 2.5vh;
+    overflow: scroll;
+    position: fixed;
+    right: 12px;
+    color: #fff;
+    background-color: rgb(34, 34, 34, .5);
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    font-family: "Satoshi-Regular";
+    animation: open 1s ease;
+}
+
+@keyframes open {
+    0% {
+        height: 0vh;
+        width: 0px;
+    } 100% {
+        height: 85vh;
+        width: 375px;
+    }
+}
+
+.empty-panel {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, .25);
+    border: 1px solid white;
+    border-radius: 12px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'futura';
+    backdrop-filter: invert(100%) blur(3px);
+    z-index: 12;
+    box-shadow: 
+               -4px -4px 10px rgb(255, 255, 255, .5), /* Darker inner shadow */
+               2px 2px 10px rgb(181, 191, 198, .8); /* Lighter inner shadow */
+
+}
+
+.rev-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.rev-content-view {
+    padding: 0 24px;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.rev-panel-title-bar {
+    padding: 24px 24px;
+    position: sticky;
+    top: 0;
+    height: 72px;
+    width: 375px;
+    background-color: rgb(34, 34, 34, 1);
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dna-button {
+   height: 46px;
+    width: 136px;
+    background-color: rgba(195, 255, 0, 0.5);
+    color: white;
+    border-style: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: .33s ease-in-out;
+    text-align: left;
+}
+
+.dna-button-selected {
+    height: 46px;
+    width: 136px;
+    background-color: rgba(137, 52, 240, 0.25);
+    color: white;
+    border-style: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: .33s ease-in-out;
+    text-align: center;
+}
+
+.dna-button-selected:hover {
+    height: 46px;
+    width: 136px;
+    background-color: rgba(137, 52, 240, 1);
+    color: black;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.dna-button:hover {
+    height: 46px;
+    width: 136px;
+    background-color: rgb(215, 229, 110);
+    color: black;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.dna-icon {
+    height: 28px;
+}
+
+.content-field-title {
+    color: rgba(255, 255, 255, .5);
+    font-family: "Satoshi-Light";
+    font-size: 14px;
+
+}
+
+.rev-panel-id-bar {
+    background-color: #333;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.id-tag {
+    opacity: 50%;
+}
+
+.id-container {
+    width: 60%;
+    font-size: 12px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.lineage-rank-container {
+    margin-left: 6px;
+    letter-spacing: 2px;
+    font-size: 11px;
+    margin: auto;
+}
+
+.rev-panel-title {
+    text-align: left;
+    font-family: "Satoshi-Bold";
+    font-size: 18px;
+    padding: 12px;
+}
+
+.rev-panel-axiom {
+    font-family: "Satoshi-Italic";
+    font-size: 22px;
+    margin-top: 24px;
+    line-height: 30px;
+}
+
+.rev-panel-body {
+    margin-top: 12px;
+    font-family: "Satoshi-Regular";
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
+}
+
+.axiom-quotations {
+    font-family: "Satoshi-Bold";
+    color: #315071;
+    margin-left: 12px;
+    margin-right: 12px;
+
+}
+
+.archetype-list {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+
+}
+
+.archetype-chip {
+    width: 36px;
+    height: 36px;
+}
+
+.archetype-chip img {
+    height: 100%;
+    width: auto;
+}

@@ -1,0 +1,9 @@
+.mesh-topology-container, .mesh-topology-error, .mesh-topology-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-color: #fff;
+}

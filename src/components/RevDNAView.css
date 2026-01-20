@@ -1,0 +1,140 @@
+.rev-dna-view {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.dna-section {
+    margin-bottom: 12px;
+}
+
+.dna-section-body {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+.dna-subblock {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    padding: 12px 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(222, 246, 178, 0.25);
+}
+
+.dna-subblock h3 {
+    width: 100%;
+    padding-left: 18px;
+    font-family: "Satoshi-Light";
+    font-size: 18px;
+}
+
+.dna-chip-list {
+    width: 100%;
+
+
+}
+
+.dna-chip {
+    list-style: none;
+    margin-top: 6px;
+    display: flex;
+    margin-left: -24px;
+}
+
+.dna-weight {
+    position: absolute;
+    right: 24px;
+    font-family: "futura";
+}
+
+.dna-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dna-list li {
+    margin-top: 12px;
+    height: auto;
+    background-color: rgb(6, 84, 58, .25);
+    border-radius: 24px;
+    text-align: center;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -24px;
+}
+
+.dna-chip-title {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 6px 12px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Satoshi-Light";
+    letter-spacing: 1.33px;
+}
+
+
+.dna-link-list {
+    list-style: none;
+}
+
+.dna-link-target {
+    color: rgb(100, 233, 149);
+    font-family: "Satoshi-Italic";
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid rgb(100, 233, 149, .25);
+    border-radius: 6px;
+    width: 270px;
+    margin-left: -10px;
+    height: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    transition: .33s ease;
+    text-align: center;
+    cursor: pointer;
+    text-wrap: wrap;
+    line-height: 40px;
+}
+
+.dna-link-flavor {
+    color: rgb(247, 180, 34);
+}
+
+.dna-link-note {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+    margin-left: -20px;
+    padding-bottom: 18px;
+    width: 300px;
+    line-height: 18px;
+    border-bottom: 1px solid rgba(100, 233, 149, .25);
+}
+
+.dna-link-data {
+    text-align: left;
+    width: 90%;
+    margin-top: 12px;
+    border: none;
+}
+
+.dna-link-target:hover {
+    transform: scale(1.05)
+}
+
+.dna-lemma-link {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: .33s ease-in-out;
+}
+
+.dna-lemma-link:hover {
+    transform: scale(1.1);
+}
