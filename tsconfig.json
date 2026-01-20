@@ -3,28 +3,5 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ],
-  "exclude": [
-    "src/components/MeshTopologyView3D.tsx",
-    "src/components/MeshTopologyView3D.css",
-    "src/components/OnboardingMolecule3D.tsx",
-    "src/components/OnboardingMolecule3D.css",
-    "src/components/OnboardingMoleculeBackup.tsx",
-    "src/pages/Home.tsx",
-    "src/pages/OnboardingPage.tsx",
-    "src/components/ArchetypeIconBar.css",
-    "src/components/ArchetypeIconBar.tsx",
-    "src/components/MeshTopologyView.tsx",
-    "src/components/Onboarding.css",
-    "src/components/Onboarding.tsx",
-    "src/components/OnboardingOverlayManager.tsx",
-    "src/components/OnboardingSidePanel.tsx",
-    "src/components/OnboardingSidePanel.css",
-    "src/components/RevDetailPanel.tsx",
-    "src/components/RevDnaView.tsx",
-    "src/components/RevList.tsx",
-    "src/components/RevListItem.tsx",
-    "src/components/ViewsToggleButton.tsx",
-    "src/components/ViewsToggleButton.css"
   ]
 }
