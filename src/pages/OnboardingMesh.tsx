@@ -10,8 +10,11 @@ import OnboardingMeshRevPanel from "../components/OnboardingMeshRevPanel";
 import OnboardingMeshRevList from "../components/OnboardingMeshRevList";
 import LogoButton from "../components/LogoButton";
 import OnboardingMeshTraversalPanel from "../components/OnboardingMeshTraversalPanel";
+import OnboardingMesh3dGraph from '../components/OnboardingMesh3dGraph';
+import ViewsToggleButton, { type DimensionalView } from "../components/ViewsToggleButton";
 
-import GENESIS_ICON from "/assets/genesis-seed-icon.png";
+
+import GENESIS_ICON from "/assets/genesis-icon.png";
 import PROBLEM_ICON from "/assets/problem-icon.png";
 import PROPOSAL_ICON from "/assets/proposal-icon.png";
 import MECHANISM_ICON from "/assets/mechanism-icon.png";
@@ -412,9 +415,22 @@ const guidedNextId = useMemo<RevId | null>(() => {
 // - Pushes history unless we're doing a back-nav pop
 // - Only adjusts sequentialTraversalStep if selecting guided prev/next
 // -------------------------
+const [currentView, setCurrentView] = useState<DimensionalView>("2d");
+
+const handleChangeView = (view: DimensionalView): void => {
+  setCurrentView(view);
+  setHoveredNodeId(null);
+};
+
+const clearSelection = (): void => {
+  setActiveNodeId("genesis.rev");
+  setSequentialTraversalStep(0);
+  setHoveredNodeId(null);
+};
 
 const handleSelect = (id: RevId): void => {
   if (id === activeNodeId) return;
+
 
   // history push (only for user/forward selections, not for "Prev" pop)
   if (!isBackNavRef.current) {
@@ -606,18 +622,36 @@ const onNextByRank = (): void => {
         onNextSequential={onNextSequential}
         onNextByRank={onNextByRank}
       />
+        <ViewsToggleButton
+        currentView={currentView}
+        onChangeView={handleChangeView}
+        onClearSelection={clearSelection}
+        />;
 
-      <OnboardingMesh2dGraph
-        revs={revs}
-        activeNodeId={activeNodeId}
-        hoveredNodeId={hoveredNodeId}
-        onSelectNode={handleSelect}
-        setHoveredNodeId={setHoveredNodeId}
-        dimensionById={dimensionById}
-        iconSrcByDimension={iconSrcByDimension}
-        guidedNextId={guidedNextId}
-        visibleNodeIds={visibleNodeIds} // ✅ new
-      />
+      {currentView === '3d' ? (
+        <OnboardingMesh3dGraph
+            revs={revs}
+            activeNodeId={activeNodeId}
+            hoveredNodeId={hoveredNodeId}
+            onSelectNode={handleSelect}
+            setHoveredNodeId={setHoveredNodeId}
+            guidedNextId={guidedNextId}
+            visibleNodeIds={visibleNodeIds}
+            dimensionById={dimensionById}
+        />
+        ) : (
+        <OnboardingMesh2dGraph
+            revs={revs}
+            activeNodeId={activeNodeId}
+            hoveredNodeId={hoveredNodeId}
+            onSelectNode={handleSelect}
+            setHoveredNodeId={setHoveredNodeId}
+            dimensionById={dimensionById}
+            iconSrcByDimension={iconSrcByDimension}
+            guidedNextId={guidedNextId}
+            visibleNodeIds={visibleNodeIds}
+        />
+        )}
 
       <OnboardingMeshRevPanel
         rev={activeRev}

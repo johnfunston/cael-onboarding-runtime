@@ -219,6 +219,8 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
   >(undefined);
 
   const [isLayoutFrozen, setIsLayoutFrozen] = useState(false);
+  const didInitialCenterRef = useRef(false);
+
 
   const { nodes: rawNodes, links: rawLinks } = useMemo(
     () => buildGraphFromOnboardingRevs(revs),
@@ -371,10 +373,25 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
         linkCurvature={(link) => getLinkCurvature(link as GraphLink)}
         linkColor={linkColor}
         linkWidth={linkWidth}
-        cooldownTime={isLayoutFrozen ? 0 : 1000}
+        cooldownTime={isLayoutFrozen ? 0 : 100}
         onEngineStop={() => {
           if (isLayoutFrozen) return;
 
+          const graph = graphRef.current;
+          if (graph && !didInitialCenterRef.current) {
+            const targetNode = nodes.find((n) => n.id === activeNodeId);
+            if (targetNode && isFGNode(targetNode)) {
+              // snap-to-center immediately once positions exist
+              graph.centerAt(targetNode.x, targetNode.y, 500);
+
+              const selectedZoom = graph.zoom() * SELECTED_ZOOM_MULTIPLIER;
+              graph.zoom(selectedZoom, 0);
+
+              didInitialCenterRef.current = true;
+            }
+          }
+
+          // Freeze layout (existing behavior)
           nodes.forEach((node) => {
             if (typeof node.x === "number" && typeof node.y === "number") {
               node.fx = node.x;
@@ -432,16 +449,6 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
             ctx.arc(x, y, size * .1, 0, 5 * Math.PI);
             ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
             ctx.lineWidth = 75 / globalScale;
-            ctx.stroke();
-            ctx.restore();
-          }
-
-          if (n.id === "genesis.rev" && !isActive) {
-            ctx.save();
-            ctx.beginPath();
-            ctx.arc(x, y, size * .1, 0, 5 * Math.PI);
-            ctx.strokeStyle = "rgba(238, 246, 89, 0.33)";
-            ctx.lineWidth = 50 / globalScale;
             ctx.stroke();
             ctx.restore();
           }

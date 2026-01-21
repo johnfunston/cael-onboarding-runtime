@@ -2,8 +2,8 @@
     min-width: 375px;
     max-width: 375px;
     padding: 0;
-    height: 85vh;
-    top: 2.5vh;
+    height: 80vh;
+    top: 7.5vh;
     overflow: scroll;
     position: fixed;
     right: 12px;
@@ -75,7 +75,7 @@
 .dna-button {
    height: 46px;
     width: 136px;
-    background-color: rgba(195, 255, 0, 0.5);
+    background-color: rgba(90, 255, 180, 0.66);
     color: white;
     border-style: none;
     border: 1px solid white;
@@ -89,7 +89,7 @@
 .dna-button-selected {
     height: 46px;
     width: 136px;
-    background-color: rgba(137, 52, 240, 0.25);
+    background-color: rgba(180, 140, 255, 0.75);
     color: white;
     border-style: none;
     border: 1px solid white;
@@ -103,7 +103,7 @@
 .dna-button-selected:hover {
     height: 46px;
     width: 136px;
-    background-color: rgba(137, 52, 240, 1);
+    background-color: rgba(180, 140, 255, 1);
     color: black;
     border-style: none;
     border: 1px solid black;
@@ -115,7 +115,7 @@
 .dna-button:hover {
     height: 46px;
     width: 136px;
-    background-color: rgb(215, 229, 110);
+    background-color: rgba(90, 255, 180, 1);
     color: black;
     border-style: none;
     border: 1px solid black;

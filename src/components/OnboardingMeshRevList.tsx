@@ -1,5 +1,5 @@
 // src/components/OnboardingMeshRevList.tsx
-import { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import OnboardingMeshRevListItem from "./OnboardingMeshRevListItem";
 import SearchBar from "./SearchBar";
 import "./RevList.css";
@@ -47,6 +47,50 @@ type OnboardingMeshRevListProps = {
   setSearchText: (s: string) => void;
 };
 
+const DIMENSION_COLOR: Record<DimensionKey, string> = {
+  GENESIS: "rgba(238, 246, 89, 0.66)",
+  PROBLEM: "rgba(255, 140, 140, 0.66)",
+  PROPOSAL: "rgba(180, 140, 255, 0.66)",
+  MECHANISM: "rgba(120, 200, 255, 0.66)",
+  TEMPORAL_EVOLUTION: "rgba(255, 180, 90, 0.66)",
+  NAVIGATION_UI: "rgba(90, 255, 180, 0.66)",
+  ANALYTICS_ENGINE: "rgba(255, 255, 255, 0.66)",
+  CLASSIFICATION_LAYER: "rgba(255, 215, 90, 0.66)",
+  GRAPH_STRUCTURE: "rgba(120, 200, 255, 0.66)",
+  SEMANTIC_VECTOR: "rgba(180, 140, 255, 0.66)",
+  RUNTIME_ARCHITECTURE: "rgba(90, 255, 180, 0.66)",
+};
+
+const FILTER_CHIP_CONTAINER_STYLE: React.CSSProperties = {
+  display: "flex",
+  gap: 8,
+  flexWrap: "wrap",
+  marginTop: 12,
+  maxHeight: 250,
+  width: 250,
+};
+
+const GROUP_LIST_STYLE: React.CSSProperties = { marginTop: 12 };
+
+const GROUP_HEADER_BASE_STYLE: React.CSSProperties = {
+  fontSize: 12,
+  letterSpacing: 1.5,
+  opacity: 0.8,
+  margin: "10px 0 6px",
+  textTransform: "uppercase",
+};
+
+const GROUP_COUNT_STYLE: React.CSSProperties = {
+  position: "relative",
+  color: "white",
+  left: 15,
+};
+
+const formatDimensionLabel = (k: DimensionKey): string =>
+  k.replaceAll("_", " ").toLowerCase();
+
+const formatGroupLabel = (k: DimensionKey): string => k.replaceAll("_", " ");
+
 const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
   groups,
   selectedId,
@@ -58,9 +102,9 @@ const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
   setSearchText,
 }) => {
   const itemRefs = useRef<Map<RevId, HTMLDivElement>>(new Map());
-    
-  // Build a flat visible list for scroll-into-view
-  const visibleIds = useMemo(() => {
+
+  // Flat visible ids (for scroll-into-view)
+  const visibleIds = useMemo<RevId[]>(() => {
     const ids: RevId[] = [];
     for (const g of groups) {
       for (const it of g.items) ids.push(it.id);
@@ -73,80 +117,83 @@ const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
     if (!visibleIds.includes(selectedId)) return;
 
     const el = itemRefs.current.get(selectedId);
-    if (el) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
+    el?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [selectedId, visibleIds]);
 
   return (
     <div className="rev-list">
       {/* Search */}
-      <SearchBar value={searchText} onChange={setSearchText} placeholder="Search revs..." />
+      <SearchBar
+        value={searchText}
+        onChange={setSearchText}
+        placeholder="Search revs..."
+      />
 
       {/* Filter chips */}
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12, maxHeight: 250, width: '25vw' }}>
+      <div style={FILTER_CHIP_CONTAINER_STYLE}>
         {dimensionKeys.map((k) => {
           const on = enabledDimensions.has(k);
+          const c = DIMENSION_COLOR[k];
+
           return (
             <button
               key={k}
               type="button"
               onClick={() => toggleDimension(k)}
+              aria-pressed={on}
               style={{
                 fontSize: 10,
                 padding: "6px 10px",
                 borderRadius: 999,
-                border: "1px solid rgba(255,255,255,0.25)",
-                background: on ? "rgba(150, 253, 24, 0.18)" : "rgba(137, 62, 62, 0.25)",
+                border: `1px solid ${c}`,
+                background: on ? c : "rgba(255, 255, 255, 0.25)",
+                opacity: on ? 1 : 0.33,
                 color: "white",
                 cursor: "pointer",
               }}
-              aria-pressed={on}
             >
-              {k.replaceAll("_", " ").toLowerCase()}
+              {formatDimensionLabel(k)}
             </button>
           );
         })}
       </div>
 
       {/* Grouped list */}
-      <div className="rev-list-items" style={{ marginTop: 12 }}>
-        {groups.map((group) => (
-          <div key={group.dimension} style={{ marginBottom: 16 }}>
-            <div
-              style={{
-                fontSize: 12,
-                letterSpacing: 1.5,
-                opacity: 0.8,
-                margin: "10px 0 6px",
-                textTransform: "uppercase",
-                color: "white",
-              }}
-            >
-              {group.dimension.replaceAll("_", " ")}
-              <span style={{position: 'relative', color: "rgba(100, 233, 149)", left: '15px'}}>({group.items.length})</span>
-            </div>
+      <div className="rev-list-items" style={GROUP_LIST_STYLE}>
+        {groups.map((group) => {
+          const dimColor = DIMENSION_COLOR[group.dimension];
 
-            {group.items.map((rev) => (
+          return (
+            <div key={group.dimension} style={{ marginBottom: 16 }}>
               <div
-                key={rev.id}
-                ref={(el) => {
-                  if (el) itemRefs.current.set(rev.id, el);
+                style={{
+                  ...GROUP_HEADER_BASE_STYLE,
+                  color: 'white',
                 }}
               >
-                <OnboardingMeshRevListItem
-                  id={rev.id}
-                  title={rev.title}
-                  selected={rev.id === selectedId}
-                  onSelect={onSelect}
-                />
+                {formatGroupLabel(group.dimension)}
+                <span style={{...GROUP_COUNT_STYLE, color: dimColor}}>({group.items.length})</span>
               </div>
-            ))}
-          </div>
-        ))}
+
+              {group.items.map((rev) => (
+                <div
+                  key={rev.id}
+                  ref={(el) => {
+                    if (el) itemRefs.current.set(rev.id, el);
+                  }}
+                >
+                  <OnboardingMeshRevListItem
+                    id={rev.id}
+                    title={rev.title}
+                    selected={rev.id === selectedId}
+                    onSelect={onSelect}
+                    dimension={rev.dimension}
+                  />
+                </div>
+              ))}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

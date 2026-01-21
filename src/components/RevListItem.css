@@ -19,28 +19,6 @@
     transition: .33s ease-in-out;
     text-rendering: optimizeLegibility;
 }
-
-.rev-list-item:hover {
-    border: 1px solid rgb(116, 207, 227);
-    color: rgb(173, 233, 247);
-    box-shadow:
-    1px 1px 5px rgba(255, 255, 255, 0.5),
-    -1px -1px 5px rgba(255, 255, 255, 0.5);
-}
-
-.selected-rev-list-item {
-    background-color: rgba(39, 58, 82, 0.5);
-    color: rgb(175, 228, 91);
-    border: 1px solid rgb(183, 227, 116);
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 15px;
-    transition: .33s ease-in-out;
-    box-shadow:
-    1px 1px 12px rgba(252, 210, 0, .25),
-    -1px -1px 6px rgba(252, 210, 0, .25);
-}
-
 .list-item-selection-bar-container {
     width: 100%;
     position: absolute;
@@ -50,7 +28,6 @@
 }
 
 .list-item-selection-bar {
-    background-color: rgba(255, 255, 255, .25);
     height: 1px;
     width: 20px;
     position: relative;
@@ -61,12 +38,10 @@
 
 .rev-list-item:hover > .list-item-selection-bar-container .list-item-selection-bar {
     width: 100px;
-    background: linear-gradient(to left, rgb(37, 98, 131), rgb(116, 207, 227), rgb(37, 98, 131));
     height: 4px;
 }
 
 .selected-rev-list-item > .list-item-selection-bar-container .list-item-selection-bar  {
-    background: linear-gradient(to left, rgb(64, 113, 16), rgb(183, 227, 116), rgb(64, 113, 16));
     width: 200px;
     height: 6px;
     top: 1px;

@@ -2,9 +2,9 @@
 .traversal-panel-container {
   position: fixed;
   bottom: 80px;
-  left: 25vw;
+  left: 310px;
   z-index: 8;
-  width: 75vw;
+  width: calc(100vw - 320px);
   padding: 6px;
   height: 22px;
   pointer-events: auto;
@@ -36,9 +36,9 @@
 }
 
 .traversal-controls-right {
-  flex: 0 0 auto;
+  min-width: 350px;
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
 }
 
 .rev-title{
@@ -50,12 +50,13 @@
     font-family: 'futura';
     letter-spacing: 2px;
     background-color: transparent;
+    text-align: center;
 }
 
 .rank-button {
     height: 46px;
     width: 136px;
-    background-color: rgba(195, 255, 0, 0.5);
+    background-color: rgba(90, 255, 180, 0.66);
     color: white;
     border-style: none;
     border: 1px solid white;
@@ -65,21 +66,21 @@
 }
 
 .disabled-rank-button {
-    background-color: rgba(195, 255, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.25);
     border-style: none;
-    border: 1px solid rgb(78, 78, 78);
+    border: 1px solid rgb(255, 255, 255, .5);
     border-radius: 6px;
     height: 46px;
     width: 136px;
-    color: rgb(78, 78, 78);
+    color: rgb(255, 255, 255, .5);
     backdrop-filter: blur(6px);
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .sequential-button {
     height: 46px;
     width: 136px;
-    background-color: rgba(137, 52, 240, 0.25);
+    background-color: rgba(180, 140, 255, 0.75);
     color: white;
     border-style: none;
     border: 1px solid white;

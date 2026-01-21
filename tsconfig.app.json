@@ -27,7 +27,6 @@
   "include": ["src"],
   "exclude": [
     "src/components/MeshTopologyView3D.tsx",
-    "src/components/MeshTopologyView3D.css",
     "src/components/OnboardingMolecule3D.tsx",
     "src/components/OnboardingMolecule3D.css",
     "src/components/OnboardingMoleculeBackup.tsx",
@@ -44,8 +43,6 @@
     "src/components/RevDetailPanel.tsx",
     "src/components/RevDnaView.tsx",
     "src/components/RevList.tsx",
-    "src/components/RevListItem.tsx",
-    "src/components/ViewsToggleButton.tsx",
-    "src/components/ViewsToggleButton.css"
+    "src/components/RevListItem.tsx"
   ]
 }
