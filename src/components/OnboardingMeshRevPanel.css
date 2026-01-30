@@ -1,6 +1,6 @@
 .rev-detail{
-    min-width: 375px;
-    max-width: 375px;
+    min-width: 400px;
+    max-width: 400px;
     padding: 0;
     height: 80vh;
     top: 7.5vh;
@@ -63,8 +63,8 @@
     padding: 24px 24px;
     position: sticky;
     top: 0;
-    height: 72px;
-    width: 375px;
+    height: auto;
+    width: 100%;
     background-color: rgb(34, 34, 34, 1);
     z-index: 3;
     display: flex;
@@ -84,6 +84,7 @@
     cursor: pointer;
     transition: .33s ease-in-out;
     text-align: left;
+    padding-left: 12px;
 }
 
 .dna-button-selected {
@@ -98,6 +99,7 @@
     cursor: pointer;
     transition: .33s ease-in-out;
     text-align: center;
+    padding-left: 0;
 }
 
 .dna-button-selected:hover {
@@ -110,6 +112,7 @@
     border-radius: 6px;
     backdrop-filter: blur(6px);
     cursor: pointer;
+    padding-left: 0;
 }
 
 .dna-button:hover {
@@ -206,4 +209,17 @@
 .archetype-chip img {
     height: 100%;
     width: auto;
+}
+
+.rev-dimension-type-bar {
+    height: 36px;
+    display: flex;
+    width: 100%;
+    background-color: rgb(34, 34, 34, 1);
+    align-items: center;
+    justify-content: center;
+}
+
+.dimension-type-tag {
+    color: white;
 }

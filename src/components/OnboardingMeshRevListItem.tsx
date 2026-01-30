@@ -5,29 +5,25 @@ type RevId = string;
 
 export type DimensionKey =
   | "GENESIS"
-  | "PROBLEM"
-  | "PROPOSAL"
-  | "MECHANISM"
-  | "TEMPORAL_EVOLUTION"
-  | "NAVIGATION_UI"
-  | "ANALYTICS_ENGINE"
-  | "CLASSIFICATION_LAYER"
-  | "GRAPH_STRUCTURE"
-  | "SEMANTIC_VECTOR"
-  | "RUNTIME_ARCHITECTURE";
+  | "FOUNDATIONS"
+  | "UNITS"
+  | "RELATIONSHIPS"
+  | "STRUCTURE"
+  | "TRAVERSAL_AND_NAVIGATION"
+  | "EVALUATION"
+  | "RUNTIME_AND_USAGE"
+  | "OUTCOMES";
 
 const DIMENSION_COLOR: Record<DimensionKey, string> = {
-  GENESIS: "rgba(238, 246, 89, 0.95)",
-  PROBLEM: "rgba(255, 140, 140, 0.9)",
-  PROPOSAL: "rgba(180, 140, 255, 0.9)",
-  MECHANISM: "rgba(120, 200, 255, 0.9)",
-  TEMPORAL_EVOLUTION: "rgba(255, 180, 90, 0.9)",
-  NAVIGATION_UI: "rgba(90, 255, 180, 0.9)",
-  ANALYTICS_ENGINE: "rgba(255, 255, 255, 0.75)",
-  CLASSIFICATION_LAYER: "rgba(255, 215, 90, 0.9)",
-  GRAPH_STRUCTURE: "rgba(120, 200, 255, 0.75)",
-  SEMANTIC_VECTOR: "rgba(180, 140, 255, 0.75)",
-  RUNTIME_ARCHITECTURE: "rgba(90, 255, 180, 0.75)",
+    GENESIS: "rgba(238, 246, 89, 0.95)",
+    FOUNDATIONS: "rgba(255, 255, 255, .9)",
+  UNITS: "rgba(255, 140, 140, 0.9)",
+  RELATIONSHIPS: "rgba(180, 140, 255, 0.9)",
+  STRUCTURE: "rgba(120, 200, 255, 0.9)",
+  TRAVERSAL_AND_NAVIGATION: "rgba(255, 180, 90, 0.9)",
+  EVALUATION: "rgba(90, 255, 180, 0.9)",
+  RUNTIME_AND_USAGE: "rgba(255, 255, 255, 0.75)",
+  OUTCOMES: "rgba(255, 215, 90, 0.9)",
 };
 
 type OnboardingMeshRevListItemProps = {

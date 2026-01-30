@@ -54,23 +54,21 @@ type GraphLink = LinkObject<GraphNode> & {
 
 export type DimensionKey =
   | "GENESIS"
-  | "PROBLEM"
-  | "PROPOSAL"
-  | "MECHANISM"
-  | "TEMPORAL_EVOLUTION"
-  | "NAVIGATION_UI"
-  | "ANALYTICS_ENGINE"
-  | "CLASSIFICATION_LAYER"
-  | "GRAPH_STRUCTURE"
-  | "SEMANTIC_VECTOR"
-  | "RUNTIME_ARCHITECTURE";
+  | "FOUNDATIONS"
+  | "UNITS"
+  | "RELATIONSHIPS"
+  | "STRUCTURE"
+  | "TRAVERSAL_AND_NAVIGATION"
+  | "EVALUATION"
+  | "RUNTIME_AND_USAGE"
+  | "OUTCOMES";
 
 const SELECTED_ZOOM_MULTIPLIER = 1;
 
 const STRAIGHT_TYPES = new Set<string>(["axiom", "lemma", "contradicts"]);
 const MID_CURVE_TYPES = new Set<string>(["corollary", "parallel", "related"]);
 const HIGH_CURVE_TYPES = new Set<string>([
-  "prerequisite",
+  "prerequisite_for",
   "supports",
   "validates",
   "governs",
@@ -79,7 +77,6 @@ const HIGH_CURVE_TYPES = new Set<string>([
 
 const DEFAULT_EDGE_COLOR = "rgba(255, 255, 255, 0.25)";
 const DEFAULT_EDGE_COLOR_DIM = "rgba(255, 255, 255, 0.2)";
-const GUIDED_EDGE_COLOR = "rgba(255, 255, 255, 0.95)";
 
 const LINK_TYPE_COLOR: Record<string, string> = {
   corollary: "rgba(180, 140, 255, 0.9)",
@@ -201,6 +198,7 @@ export interface OnboardingMesh2dGraphProps {
   guidedNextId: RevId | null;
 
   visibleNodeIds: Set<RevId>; // ✅ new
+
 }
 
 const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
@@ -211,7 +209,6 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
   onSelectNode,
   dimensionById,
   iconSrcByDimension,
-  guidedNextId,
   visibleNodeIds, // ✅ new
 }) => {
   const graphRef = useRef<
@@ -306,18 +303,6 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
     return <div className="mesh-topology-loading">No mesh data.</div>;
   }
 
-  const isGuidedEdge = (link: GraphLink): boolean => {
-    if (!guidedNextId) return false;
-    const s = endpointId(link.source);
-    const t = endpointId(link.target);
-    if (!s || !t) return false;
-
-    return (
-      (s === activeNodeId && t === guidedNextId) ||
-      (s === guidedNextId && t === activeNodeId)
-    );
-  };
-
   const isActiveOutgoingEdge = (link: GraphLink): boolean => {
     const s = endpointId(link.source);
     const t = endpointId(link.target);
@@ -336,7 +321,6 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
   const linkColor = (linkObj: LinkObject<GraphNode>): string => {
     const link = linkObj as GraphLink;
 
-    if (isGuidedEdge(link)) return GUIDED_EDGE_COLOR;
 
     const activeOutgoing = isActiveOutgoingEdge(link);
     const hoverOutgoing = isHoveredOutgoingEdge(link);
@@ -352,8 +336,6 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
 
   const linkWidth = (linkObj: LinkObject<GraphNode>): number => {
     const link = linkObj as GraphLink;
-
-    if (isGuidedEdge(link)) return 1.3;
 
     const activeOutgoing = isActiveOutgoingEdge(link);
     const hoverOutgoing = isHoveredOutgoingEdge(link);
@@ -417,31 +399,12 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
 
           const isActive = n.id === activeNodeId;
           const isHovered = hoveredNodeId !== null && n.id === hoveredNodeId;
-          const isNext = guidedNextId !== null && n.id === guidedNextId;
 
           const baseSize = 24 + Math.log1p(n.degree ?? 0) * 6;
-          const sizeMult = isActive ? 1.25 : isNext || isHovered ? .85 : 0.55;
-          const alpha = isActive ? 1.0 : isNext || isHovered ? 1.0 : 0.5;
+          const sizeMult = isActive ? 1.25 : isHovered ? .85 : 0.55;
+const alpha = isActive ? 1.0 : isHovered ? 1.0 : 0.5;
 
           const size = (baseSize * sizeMult * 1.25) / globalScale;
-
-          if (isNext) {
-            ctx.save();
-
-            ctx.beginPath();
-            ctx.arc(x, y, size * 0.95, 0, 2 * Math.PI);
-            ctx.strokeStyle = "rgba(103, 107, 209, 0.987)";
-            ctx.lineWidth = .75 / globalScale;
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.arc(x, y, size * 0.72, 0, 4 * Math.PI);
-            ctx.strokeStyle = "rgba(103, 107, 209, 0.987)";
-            ctx.lineWidth = 1 / globalScale;
-            ctx.stroke();
-
-            ctx.restore();
-          }
 
           if (isActive) {
             ctx.save();
@@ -480,10 +443,9 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
 
           const isActive = n.id === activeNodeId;
           const isHovered = hoveredNodeId !== null && n.id === hoveredNodeId;
-          const isNext = guidedNextId !== null && n.id === guidedNextId;
 
           const base = 18 + Math.log1p(n.degree ?? 0) * 2;
-          const sizeMult = isActive ? 1.25 : isNext || isHovered ? 1.0 : 0.8;
+          const sizeMult = isActive ? 1.25 : isHovered ? 1.0 : 0.8;
           const r = base * sizeMult;
 
           ctx.fillStyle = paintColor;

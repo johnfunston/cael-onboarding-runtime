@@ -1,5 +1,5 @@
 // src/components/OnboardingMeshRevList.tsx
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import OnboardingMeshRevListItem from "./OnboardingMeshRevListItem";
 import SearchBar from "./SearchBar";
 import "./RevList.css";
@@ -8,16 +8,14 @@ type RevId = string;
 
 export type DimensionKey =
   | "GENESIS"
-  | "PROBLEM"
-  | "PROPOSAL"
-  | "MECHANISM"
-  | "TEMPORAL_EVOLUTION"
-  | "NAVIGATION_UI"
-  | "ANALYTICS_ENGINE"
-  | "CLASSIFICATION_LAYER"
-  | "GRAPH_STRUCTURE"
-  | "SEMANTIC_VECTOR"
-  | "RUNTIME_ARCHITECTURE";
+  | "FOUNDATIONS"
+  | "UNITS"
+  | "RELATIONSHIPS"
+  | "STRUCTURE"
+  | "TRAVERSAL_AND_NAVIGATION"
+  | "EVALUATION"
+  | "RUNTIME_AND_USAGE"
+  | "OUTCOMES";
 
 export type OnboardingRevListItemData = {
   id: RevId;
@@ -30,6 +28,18 @@ export type RevGroup = {
   dimension: DimensionKey;
   items: OnboardingRevListItemData[];
 };
+
+export type SearchFieldKey =
+  | "id"
+  | "title"
+  | "purpose"
+  | "seedEvent"
+  | "body"
+  | "dimensions"
+  | "families"
+  | "subfamilies";
+
+export type SearchFields = Record<SearchFieldKey, boolean>;
 
 type OnboardingMeshRevListProps = {
   groups: RevGroup[];
@@ -45,29 +55,22 @@ type OnboardingMeshRevListProps = {
   // search
   searchText: string;
   setSearchText: (s: string) => void;
+
+  // field gating for search
+  searchFields: SearchFields;
+  setSearchFieldEnabled: (key: SearchFieldKey, enabled: boolean) => void;
 };
 
 const DIMENSION_COLOR: Record<DimensionKey, string> = {
-  GENESIS: "rgba(238, 246, 89, 0.66)",
-  PROBLEM: "rgba(255, 140, 140, 0.66)",
-  PROPOSAL: "rgba(180, 140, 255, 0.66)",
-  MECHANISM: "rgba(120, 200, 255, 0.66)",
-  TEMPORAL_EVOLUTION: "rgba(255, 180, 90, 0.66)",
-  NAVIGATION_UI: "rgba(90, 255, 180, 0.66)",
-  ANALYTICS_ENGINE: "rgba(255, 255, 255, 0.66)",
-  CLASSIFICATION_LAYER: "rgba(255, 215, 90, 0.66)",
-  GRAPH_STRUCTURE: "rgba(120, 200, 255, 0.66)",
-  SEMANTIC_VECTOR: "rgba(180, 140, 255, 0.66)",
-  RUNTIME_ARCHITECTURE: "rgba(90, 255, 180, 0.66)",
-};
-
-const FILTER_CHIP_CONTAINER_STYLE: React.CSSProperties = {
-  display: "flex",
-  gap: 8,
-  flexWrap: "wrap",
-  marginTop: 12,
-  maxHeight: 250,
-  width: 250,
+  GENESIS: "rgba(238, 246, 89, 0.95)",
+  FOUNDATIONS: "rgba(255, 255, 255, .9)",
+  UNITS: "rgba(255, 140, 140, 0.9)",
+  RELATIONSHIPS: "rgba(180, 140, 255, 0.9)",
+  STRUCTURE: "rgba(120, 200, 255, 0.9)",
+  TRAVERSAL_AND_NAVIGATION: "rgba(255, 180, 90, 0.9)",
+  EVALUATION: "rgba(90, 255, 180, 0.9)",
+  RUNTIME_AND_USAGE: "rgba(255, 255, 255, 0.75)",
+  OUTCOMES: "rgba(255, 215, 90, 0.9)",
 };
 
 const GROUP_LIST_STYLE: React.CSSProperties = { marginTop: 12 };
@@ -100,8 +103,17 @@ const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
   toggleDimension,
   searchText,
   setSearchText,
+  searchFields,
+  setSearchFieldEnabled,
 }) => {
   const itemRefs = useRef<Map<RevId, HTMLDivElement>>(new Map());
+
+  // ✅ accordion state (default collapsed)
+  const [dimsOpen, setDimsOpen] = useState<boolean>(false);
+
+  // ✅ NEW: rev list open/closed (default open)
+  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const toggleIsOpen = (): void => setIsOpen((v) => !v);
 
   // Flat visible ids (for scroll-into-view)
   const visibleIds = useMemo<RevId[]>(() => {
@@ -121,41 +133,67 @@ const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
   }, [selectedId, visibleIds]);
 
   return (
-    <div className="rev-list">
+    <div
+      className={`rev-list ${isOpen ? "is-open" : "is-closed"}`}
+      data-open={isOpen ? "true" : "false"}
+    >
+      <button
+        type="button"
+        className="rev-list-toggle-button"
+        onClick={toggleIsOpen}
+        aria-pressed={!isOpen}
+        aria-label={isOpen ? "Close rev list" : "Open rev list"}
+        title={isOpen ? "Close" : "Open"}
+      />
+
       {/* Search */}
       <SearchBar
         value={searchText}
         onChange={setSearchText}
         placeholder="Search revs..."
+        searchFields={searchFields}
+        setSearchFieldEnabled={setSearchFieldEnabled}
       />
 
-      {/* Filter chips */}
-      <div style={FILTER_CHIP_CONTAINER_STYLE}>
-        {dimensionKeys.map((k) => {
-          const on = enabledDimensions.has(k);
-          const c = DIMENSION_COLOR[k];
+      {/* ✅ Dimension filters accordion */}
+      <div className="rev-list-dims-accordion">
+        <button
+          type="button"
+          className={`${
+            dimsOpen ? "rev-list-dims-header-is-open" : "rev-list-dims-header"
+          }`}
+          onClick={() => setDimsOpen((v) => !v)}
+          aria-expanded={dimsOpen}
+        >
+          <span className="rev-list-dims-title">dimensions</span>
+          <span className="rev-list-dims-meta">
+            {dimsOpen ? "collapse" : "expand"}
+          </span>
+        </button>
 
-          return (
-            <button
-              key={k}
-              type="button"
-              onClick={() => toggleDimension(k)}
-              aria-pressed={on}
-              style={{
-                fontSize: 10,
-                padding: "6px 10px",
-                borderRadius: 999,
-                border: `1px solid ${c}`,
-                background: on ? c : "rgba(255, 255, 255, 0.25)",
-                opacity: on ? 1 : 0.33,
-                color: "white",
-                cursor: "pointer",
-              }}
-            >
-              {formatDimensionLabel(k)}
-            </button>
-          );
-        })}
+        <div className={`rev-list-dims-body ${dimsOpen ? "open" : "closed"}`}>
+          {dimensionKeys.map((k) => {
+            const on = enabledDimensions.has(k);
+            const c = DIMENSION_COLOR[k];
+
+            return (
+              <button
+                key={k}
+                type="button"
+                onClick={() => toggleDimension(k)}
+                aria-pressed={on}
+                className="rev-list-dim-chip"
+                style={{
+                  border: `1px solid ${c}`,
+                  background: on ? c : "rgba(255, 255, 255, 0.25)",
+                  opacity: on ? 1 : 0.33,
+                }}
+              >
+                {formatDimensionLabel(k)}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Grouped list */}
@@ -165,14 +203,11 @@ const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
 
           return (
             <div key={group.dimension} style={{ marginBottom: 16 }}>
-              <div
-                style={{
-                  ...GROUP_HEADER_BASE_STYLE,
-                  color: 'white',
-                }}
-              >
+              <div style={{ ...GROUP_HEADER_BASE_STYLE, color: "white" }}>
                 {formatGroupLabel(group.dimension)}
-                <span style={{...GROUP_COUNT_STYLE, color: dimColor}}>({group.items.length})</span>
+                <span style={{ ...GROUP_COUNT_STYLE, color: dimColor }}>
+                  ({group.items.length})
+                </span>
               </div>
 
               {group.items.map((rev) => (

@@ -10,7 +10,7 @@
 
     "seedEvent": "Recognition that human reasoning naturally forms networks of ideas, dependencies, and evolving interpretations, but existing knowledge tools represent them linearly.",
     "purpose": "Define the foundational problem CAEL addresses: making cognitive structure visible rather than implicit.",
-    "body": "Human reasoning generates complex networks of ideas, assumptions, dependencies, and evolving interpretations. Existing tools store knowledge linearly — as documents, notes, or folders — which obscures how ideas relate, depend on one another, and transform over time. As complexity increases, individuals lose visibility into the structure of their own thinking. CAEL begins from the problem of making cognitive structure inspectable, navigable, and structurally explicit rather than hidden inside linear text.",
+    "body": "Humans naturally form networks of ideas.\nSome ideas depend on others.\nSome ideas change meaning as new understanding develops.\n\nBut most knowledge tools store information in linear formats like documents, notes, folders, or lists. This makes it difficult to see:\n\n• which ideas support other ideas\n• where assumptions come from\n• how understanding evolves over time\n\nAs projects, research, or personal thinking grow more complex, people lose visibility into the structure of their own reasoning. The relationships remain real but are hidden inside text.\n\n{{CAEL|CAEL}} is proposed as a system designed to make this hidden structure visible. CAEL stands for:\n\nCognitive:\n• Assistant\n• Environment\n• Ledger\n\nIts goal is to store knowledge so that idea networks can be inspected, navigated, and understood as connected structures, not just pages of text.\n\nThis project begins from a single question:\n\nHow can we make cognitive structure explicit instead of implicit?\n\nThe answer will require two things:\n\n• recording how ideas relate\n• recording how humans reason about those ideas\n\nBoth must become visible if a system is to support thinking rather than merely storing text.",
     "axiom": "Understanding improves when structure is visible.",
 
     "archetypes": [],
@@ -104,6 +104,178 @@
     }
   },
   {
+    "id": "cognitive.feedback.loop.rev",
+    "title": "The Cognitive Feedback Loop",
+    "userId": "1",
+    "status": "integrated",
+    "version": "1.0.0",
+    "createdAt": "",
+    "updatedAt": "",
+
+    "seedEvent": "Once system architecture mirrored cognitive function, interaction with the system began reflecting cognitive processes back to the user.",
+    "purpose": "Define the feedback loop created when users interact with a system that externalizes their own cognitive operations.",
+    "body": "When a system’s architecture mirrors cognitive function, using the system activates the same functional patterns that shaped its design.\n\nExploring knowledge triggers exploration services. Evaluating ideas triggers evaluation services. Seeking explanation triggers interpretation services. Setting limits triggers boundary services. Committing to action triggers execution services.\n\nAs users interact, their cognitive operations are externalized into structured artifacts. The system then operates over those artifacts and reflects structured outputs back to the user.\n\nThis produces a feedback loop:\n\nMind → structured insight objects → structured runtime operations → reflected structure → mind\n\nThrough repeated interaction, users gain visibility into how their own reasoning unfolds. Cognitive processes that were previously implicit become inspectable, navigable, and improvable.\n\nThe result is not simply stored knowledge, but stabilized long-horizon learning and reasoning.\n\nCAEL therefore functions as a cognitive mirror: a system that makes thought itself structurally visible.",
+    "axiom": "Externalized cognition becomes learnable cognition.",
+
+    "archetypes": [],
+    "tags": [],
+
+    "links": [
+      {
+        "targetId": "coherence.loss.function.rev",
+        "type": "lemma",
+        "note": "A target attractor state is required to evaluate deviation under the coherence loss function.",
+        "confidence": 1.0
+      },
+      {
+        "targetId": "glyph.constellation.rev",
+        "type": "parallel",
+        "note": "Both represent stable high-coherence structures — one conceptual reference state, one emergent detected state.",
+        "confidence": 1.0
+      }
+    ],
+    "embedding": [],
+    "graphEmbedding": [],
+    "fusedEmbedding": [],
+
+    "history": [],
+
+    "metadata": {
+      "confidence": 1,
+      "hyperedges": [],
+      "lineageRank": 77
+    }
+  },
+  {
+    "id": "cognitive.abstraction.rev",
+    "title": "Abstracting Cognitive Functions into Symbolic Roles",
+    "userId": "1",
+    "status": "integrated",
+    "version": "1.0.0",
+    "createdAt": "",
+    "updatedAt": "",
+
+    "seedEvent": "Recurring cognitive functions were observed in reasoning and decision-making, but remained implicit, overlapping, and difficult to formalize or externalize into software.",
+    "purpose": "Define why CAEL abstracts human cognitive functions into symbolic role labels to make reasoning processes explicit, nameable, and structurally usable.",
+    "body": "Human reasoning is not a single uniform process. Different cognitive functions activate depending on context: noticing, evaluating, deciding, protecting boundaries, executing action, explaining, preserving continuity, or exploring novelty.\n\nIn ordinary thinking these functions remain implicit and overlapping. They are difficult to reason about, difficult to teach, and especially difficult to externalize into software systems.\n\nCAEL addresses this by labeling recurring cognitive function clusters with symbolic role names. These names are not personality types and not metaphorical characters. They are compact identifiers for bundled cognitive operations.\n\nOnce named, each role can be treated as a functional service:\n\n• it has typical inputs\n• it produces characteristic outputs\n• it has identifiable failure modes\n\nThis abstraction allows complex human reasoning dynamics to be discussed, recorded, and eventually implemented without requiring low-level behavioral modeling.\n\nSymbolic roles therefore act as stable handles for cognitive function clusters, making reasoning structure explicit and addressable.",
+    "axiom": "Naming functions makes complex reasoning structurally addressable.",
+
+    "archetypes": [],
+    "tags": [],
+
+    "links": [
+      {
+        "targetId": "coherence.loss.function.rev",
+        "type": "lemma",
+        "note": "A target attractor state is required to evaluate deviation under the coherence loss function.",
+        "confidence": 1.0
+      },
+      {
+        "targetId": "glyph.constellation.rev",
+        "type": "parallel",
+        "note": "Both represent stable high-coherence structures — one conceptual reference state, one emergent detected state.",
+        "confidence": 1.0
+      }
+    ],
+    "embedding": [],
+    "graphEmbedding": [],
+    "fusedEmbedding": [],
+
+    "history": [],
+
+    "metadata": {
+      "confidence": 1,
+      "hyperedges": [],
+      "lineageRank": 74
+    }
+  },
+  {
+    "id": "cognitive.to.computational.mapping.rev",
+    "title": "Mapping Cognitive Roles to Computational Architecture",
+    "userId": "1",
+    "status": "integrated",
+    "version": "1.0.0",
+    "createdAt": "",
+    "updatedAt": "",
+
+    "seedEvent": "Once cognitive roles were abstracted symbolically, it became clear that each role corresponded closely to standard responsibilities in software system design.",
+    "purpose": "Define how abstracted cognitive roles map onto software services and architectural components in the CAEL runtime.",
+    "body": "After cognitive functions were abstracted into symbolic roles, a structural alignment emerged: each cognitive role corresponded to a familiar responsibility in software architecture.\n\nObservation revealed that both minds and software systems require similar separations of concern to remain stable:\n\n• observing system state\n• evaluating conditions\n• routing control flow\n• enforcing boundaries\n• executing actions\n• interpreting structures\n• preserving continuity\n• exploring alternatives\n\nMapping cognitive roles to computational services was therefore not metaphorical. It was a direct translation of functional decomposition from mind to machine.\n\nIn CAEL, symbolic cognitive roles become service-level agents within the runtime. Each is responsible for a specific class of operations, defined inputs, and constrained outputs.\n\nThis establishes a correspondence:\n\nHuman cognitive architecture → Computational architecture\n\nThe result is a system whose internal organization mirrors the functional organization of human reasoning.",
+    "axiom": "Shared functional decomposition links cognitive and computational architecture.",
+
+    "archetypes": [],
+    "tags": [],
+
+    "links": [
+      {
+        "targetId": "coherence.loss.function.rev",
+        "type": "lemma",
+        "note": "A target attractor state is required to evaluate deviation under the coherence loss function.",
+        "confidence": 1.0
+      },
+      {
+        "targetId": "glyph.constellation.rev",
+        "type": "parallel",
+        "note": "Both represent stable high-coherence structures — one conceptual reference state, one emergent detected state.",
+        "confidence": 1.0
+      }
+    ],
+    "embedding": [],
+    "graphEmbedding": [],
+    "fusedEmbedding": [],
+
+    "history": [],
+
+    "metadata": {
+      "confidence": 1,
+      "hyperedges": [],
+      "lineageRank": 75
+    }
+  },
+  {
+    "id": "architecture.why.it.matters.rev",
+    "title": "Why Cognitive-Architectural Alignment Matters",
+    "userId": "1",
+    "status": "integrated",
+    "version": "1.0.0",
+    "createdAt": "",
+    "updatedAt": "",
+
+    "seedEvent": "Traditional software systems were observed to be powerful but psychologically misaligned, forcing users to adapt their thinking to system structure rather than the reverse.",
+    "purpose": "Explain why aligning software architecture with cognitive function improves usability, learning, and long-horizon reasoning.",
+    "body": "Most software systems are built around data models, controllers, services, and interfaces designed for technical efficiency. They rarely reflect how humans naturally attend, decide, learn, and revise understanding.\n\nAs a result, many systems become powerful but psychologically clumsy:\n\n• workflows feel unintuitive\n• exploration feels disorienting\n• memory feels fragmented\n• learning feels effortful\n\nBy mapping system services onto cognitive functions, CAEL reverses this relationship. The system’s structure is shaped to fit how minds operate, rather than requiring minds to adapt to system constraints.\n\nThis alignment produces:\n\n• interfaces that follow attention flow\n• workflows that match decision formation\n• persistence that matches memory formation\n• exploration modes that match curiosity\n• safety gates that match vulnerability needs\n\nThe outcome is not philosophical. It is practical:\n\nA system whose architecture fits the user’s cognition becomes easier to learn, easier to trust, and easier to live inside.",
+    "axiom": "Systems become usable when structure fits cognition.",
+
+    "archetypes": [],
+    "tags": [],
+
+    "links": [
+      {
+        "targetId": "coherence.loss.function.rev",
+        "type": "lemma",
+        "note": "A target attractor state is required to evaluate deviation under the coherence loss function.",
+        "confidence": 1.0
+      },
+      {
+        "targetId": "glyph.constellation.rev",
+        "type": "parallel",
+        "note": "Both represent stable high-coherence structures — one conceptual reference state, one emergent detected state.",
+        "confidence": 1.0
+      }
+    ],
+    "embedding": [],
+    "graphEmbedding": [],
+    "fusedEmbedding": [],
+
+    "history": [],
+
+    "metadata": {
+      "confidence": 1,
+      "hyperedges": [],
+      "lineageRank": 76
+    }
+  },
+  {
     "id": "unstructured.insight.rev",
     "title": "The Problem of Unstructured Insight Representation",
     "userId": "1",
@@ -114,7 +286,7 @@
 
     "seedEvent": "Observation that most knowledge systems store ideas as free-form text, preventing reliable machine processing and structural reorganization.",
     "purpose": "Identify the limitation of free-form knowledge storage.",
-    "body": "Most knowledge systems treat insights as unstructured text. Without consistent internal structure, software cannot reliably analyze, compare, or reorganize ideas. This limits automation, search precision, and traceability. A system is needed that represents insights as structured entities rather than undifferentiated text blocks.",
+    "body": "Most knowledge tools store ideas as free-form text: notes, documents, or paragraphs written for humans.\n\nThat works for writing, but it creates a problem for software.\nIf an “insight” has no consistent structure, a system cannot reliably:\n\n• identify what the idea is\n• compare one idea to another\n• reorganize ideas into new views (clusters, dependencies, timelines)\n• track where an idea came from or what it depends on\n\nAs a result, automation becomes fragile, search becomes less precise, and it becomes hard to trace how conclusions were formed.\n\nThis problem motivates a different approach, choosing to represent insights as structured entities, and not just as blocks of text.",
     "axiom": "Insights must be structured to become computable.",
 
     "archetypes": [],
@@ -157,7 +329,7 @@
 
     "seedEvent": "Recognition that words and concepts drift in meaning across contexts, causing accumulated knowledge to become ambiguous or contradictory.",
     "purpose": "Define the challenge of meaning stability.",
-    "body": "Words and concepts shift meaning across contexts, time, and usage. When insight records lack mechanisms for clarifying semantic intent, accumulated knowledge becomes ambiguous or contradictory. A cognitive system requires explicit representation of meaning boundaries to prevent semantic drift as knowledge grows.",
+    "body": "Words and concepts do not hold perfectly fixed meanings.\nTheir interpretation shifts across contexts, communities, and time.\n\nWhen insight records lack a way to clarify intended meaning, accumulated knowledge can become ambiguous (multiple possible interpretations), or contradictory (statements that appear to disagree).\n\nAs a knowledge system grows, this {{“semantic drift”|semantic drift}} makes it harder to trust conclusions or understand earlier work.\n\nA {{cognitive knowledge system|CAEL}} therefore requires ways to represent meaning boundaries explicitly — so ideas remain stable even as surrounding context evolves.\n\nThis problem defines the need for controlled meaning representation rather than relying on raw language alone.",
     "axiom": "Meaning must be bounded to remain stable.",
 
     "archetypes": [],
@@ -206,7 +378,7 @@
 
     "seedEvent": "Recognition that ideas evolve through reinterpretation and refinement, yet traditional systems overwrite or fragment their developmental history.",
     "purpose": "Identify hidden prerequisite relationships between ideas.",
-    "body": "Later conclusions often rely on earlier assumptions, but these dependencies are rarely made explicit. When prerequisite relationships remain implicit, reasoning becomes difficult to audit, revise, or teach. A system must expose dependency chains so that the foundations of any conclusion can be traced.",
+    "body": "Ideas rarely stand alone.\nLater conclusions often rely on earlier assumptions or prior insights.\n\nIn most knowledge tools, these prerequisite relationships remain implicit.\nThey live only in the author’s memory or inside long-form text.\n\nWhen dependency chains are hidden:\n\n• reasoning is difficult to audit\n• revisions risk breaking unseen assumptions\n• teaching or explaining the development of an idea becomes harder\n\nA knowledge system must therefore expose {{dependency chains|lemmas}} explicitly, so the foundations of any conclusion can be traced and inspected.",
     "axiom": "Reasoning becomes reliable when dependencies are explicit.",
 
     "archetypes": [],
@@ -249,7 +421,7 @@
 
     "seedEvent": "Recognition that ideas evolve through reinterpretation and refinement, yet traditional systems overwrite or fragment their developmental history.",
     "purpose": "Define the difficulty of tracking idea refinement over time.",
-    "body": " Ideas evolve through revision, reinterpretation, and extension. Traditional note systems overwrite or fragment versions, losing the developmental lineage of thought. A cognitive platform must preserve the evolutionary path of ideas rather than only their latest state.",
+    "body": "Ideas do not appear fully formed.\nThey evolve through revision, reinterpretation, and extension over time.\n\nTraditional note-taking systems usually:\n\n• overwrite older versions\n• scatter revisions across folders\n• or lose intermediate steps entirely\n\nThis fragments the developmental history of thought.\nLater readers see only the final result, not how it came to be.\n\nA cognitive knowledge platform must preserve the {{evolutionary path of ideas|lineage rank}}, not just their latest state, so reasoning development remains inspectable.",
     "axiom": "Thought must preserve its own evolution.",
 
     "archetypes": [],
@@ -292,7 +464,7 @@
 
     "seedEvent": "Encountering disorientation when many interconnected ideas exceed the capacity of linear browsing.",
     "purpose": "Identify the navigation challenge posed by interconnected ideas.",
-    "body": "When many insights interconnect, linear browsing becomes ineffective. Users require mechanisms to traverse networks of ideas without becoming disoriented. This introduces the need for spatial or relational navigation rather than purely sequential reading.",
+    "body": "When only a few ideas exist, reading them in sequence works well.\nBut when many insights interconnect, linear browsing breaks down.\n\nUsers can become disoriented because:\n\n• there are too many possible paths\n• related ideas may be far apart in a list\n• important structures are not visually apparent\n\nLarge knowledge networks therefore require new {{navigation methods|traversal}}.\nInstead of only scrolling or searching text, users need spatial or relational navigation — ways to move through connected ideas without losing orientation.\n\nThis defines the challenge of navigating large knowledge graphs.",
     "axiom": "Knowledge networks require spatial navigation.",
 
     "archetypes": [],
@@ -335,7 +507,7 @@
 
     "seedEvent": "Recognition that rigid taxonomies oversimplify complex ideas while free tagging lacks consistency.",
     "purpose": "Define the need for flexible classification.",
-    "body": "Rigid taxonomies oversimplify complex ideas, while purely free tagging lacks consistency. Knowledge systems require classification schemes that allow stable organization without forcing insights into single fixed categories.",
+    "body": "Classification helps people navigate knowledge.\nBut classification systems can fail in two opposite ways.\n\n• Rigid taxonomies oversimplify complex ideas by forcing them into fixed boxes.\n• Pure free-tagging becomes chaotic and inconsistent over time.\n\nA knowledge system therefore needs both in balanced measure.\n\nFlexible classification provides organization that remains stable enough to browse, but not so rigid that it distorts meaning.\n\nThis defines the need to balance structure with adaptability.",
     "axiom": "Classification must balance stability and flexibility.",
 
     "archetypes": [],
@@ -372,7 +544,7 @@
 
     "seedEvent": "Observation that humans intuitively sense related ideas even when no explicit links exist.",
     "purpose": "Identify the need to estimate similarity between ideas.",
-    "body": "Humans intuitively recognize when two ideas are related even without explicit links. A cognitive system needs a way to approximate conceptual proximity in order to surface relevant connections beyond manually defined relationships.",
+    "body": "Humans can often sense when two ideas are related, even if no explicit link exists between them.\n\nTraditional knowledge systems only reveal relationships that were manually recorded.\nBut many meaningful connections remain implicit.\n\nThe mesh therefore needs a way to estimate conceptual proximity — an approximation of how closely related two ideas are — so relevant connections can be surfaced even when no direct relationship was defined.\n\nThis defines the need for similarity-based discovery alongside explicit linking.",
     "axiom": "Systems must approximate conceptual proximity.",
 
     "archetypes": [],
@@ -414,8 +586,8 @@
     "updatedAt": "",
 
     "seedEvent": "As insight objects accumulated, it became difficult to determine which ideas depended on others, which were foundational, and how conceptual ancestry could be traced.",
-    "purpose": "Define a system for tracking parentage, descent, and dependency relationships between insight objects.",
-    "body": "The genealogy index records how insight objects relate across conceptual lineage. Some insights act as prerequisites for later conclusions; others refine, invert, or generalize earlier work. By tracking these relationships, CAEL can answer questions such as: “What had to exist for this insight to be possible?” and “Which later ideas build upon this one?” Genealogy is distinct from general semantic linking. It specifically captures dependency and descent, enabling inspection of reasoning chains and historical development of ideas. This supports trust, auditability, and educational use, where understanding how knowledge evolved is as important as the final result.",
+    "purpose": "Define a system for tracking parentage, descent, and {{dependency relationships|lemmas}} between insight objects.",
+    "body": "As {{insight objects|.rev}} accumulate, it becomes hard to tell which ideas are foundational and which ideas were built later.\nA “flat list” of insights doesn’t show conceptual ancestry.\n\nThe genealogy index is a way to record lineage relationships between insight objects, such as:\n\n• this idea was required before that one could exist\n• this idea refines or generalizes an earlier one\n• this idea reverses or corrects a prior conclusion\n\nThis is different from general “related topic” linking.\nGenealogy specifically tracks {{dependency|lemmas}} and {{descent|lineage rank}}, so the system can answer questions like:\n\n• “What had to be true before this insight was possible?”\n• “Which later ideas rely on this one?”\n\nCapturing ancestry supports trust and auditability, and it also supports teaching: understanding how knowledge developed can matter as much as the final result",
     "axiom": "Every idea has an ancestry.",
 
     "archetypes": [],
@@ -470,7 +642,7 @@
 
     "seedEvent": "Recognition that growing knowledge networks develop clusters, hubs, and gaps that remain invisible without analytical tools.",
     "purpose": "Define the challenge of identifying global knowledge patterns.",
-    "body": "As insight networks grow, certain nodes become central, clusters form, and gaps appear. Without analytical tools, these structural properties remain invisible. A cognitive system must support detection of connectivity patterns and structural significance.",
+    "body": "As the mesh grows, its structure develops {{recognizable shapes|node clustering}}.\n\nFor example:\n\n• some ideas become highly connected hubs\n• clusters of related ideas form\n• gaps appear where concepts are missing\n\nWithout analytical tools, these structural patterns remain invisible.\nUsers may sense complexity, but cannot inspect it directly.\n\nA cognitive knowledge system must therefore support detection of connectivity patterns and structural significance, so global structure can be understood rather than guessed.",
     "axiom": "Structure must be detectable to be understood.",
 
     "archetypes": [],
@@ -507,7 +679,7 @@
 
     "seedEvent": "Recognition that understanding depends on how ideas gain new relevance over time, not just when they were written.",
     "purpose": "Identify the role of time in knowledge systems.",
-    "body": "Understanding often depends on when an idea emerged relative to others. Linear timestamps alone do not capture how earlier ideas gain new relevance after later developments. A cognitive system must preserve temporal relationships without forcing strictly chronological organization.",
+    "body": "Understanding often depends not just on when an idea was written, but how its relevance changes after later developments.\n\nSimple timestamps capture chronology.\nThey do not capture relational time — how earlier ideas gain new meaning in light of later ones. Sometimes a tenuous and poorly connected insight can re-emerge as a key lemma dependency, being retro-actively cast in an entirely new light.\n\nA cognitive knowledge system must preserve temporal relationships without forcing knowledge into a strictly linear timeline.\n\nTime in knowledge is therefore relational, not merely chronological.",
     "axiom": "Time in knowledge systems is relational, not merely chronological.",
 
     "archetypes": [],
@@ -548,9 +720,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "Recognition that complex questions require multiple reasoning strategies that conflict without orchestration.",
+    "seedEvent": "Recognition that complex questions require multiple reasoning strategies that can conflict without explicit orchestration directives.",
     "purpose": "Define the need for multi-perspective reasoning control.",
-    "body": "Complex questions require different analytical approaches: structural reasoning, evaluative reasoning, exploratory reasoning, and contextual reasoning. Without explicit coordination mechanisms, such perspectives conflict or collapse into single-mode thinking. A cognitive system must manage the interplay of multiple reasoning strategies.",
+    "body": "Complex questions rarely yield to a single style of thinking.\nDifferent situations call for {{different reasoning modes||archetypal cognitive roles}}:\n\n• structural reasoning (how things relate)\n• evaluative reasoning (what is correct or reliable)\n• exploratory reasoning (what might be connected)\n• contextual reasoning (what matters right now)\n\nWithout coordination, these perspectives can conflict or collapse into a single dominant mode.\n\nA cognitive knowledge system must therefore manage multiple reasoning modes and control how they interact.\n\nIntelligence emerges from {{orchestrated perspectives|orchestration}}, not isolated ones.",
     "axiom": "Intelligence emerges from coordinated perspectives.",
 
     "archetypes": [],
@@ -593,7 +765,7 @@
 
     "seedEvent": "Recognition that insight systems lack explicit criteria for judging whether new knowledge improves coherence or introduces distortion.",
     "purpose": "Identify the absence of global quality metrics.",
-    "body": "When a system stores and generates insights, it must evaluate whether new outputs improve clarity or introduce distortion. Without explicit evaluation criteria, knowledge systems accumulate unchecked inconsistencies. A cognitive architecture needs definable criteria for assessing alignment, consistency, and usefulness.",
+    "body": "A knowledge system does more than store ideas. It generates new ones, refines old ones, and suggests connections.\n\nBut without evaluation criteria, the system cannot tell whether a new operation:\n\n• improves clarity\n• increases coherence\n• or introduces distortion and inconsistency\n\nWithout explicit standards, knowledge can accumulate unchecked contradictions.\n\nIn CAEL, evaluation is performed by a dedicated runtime agent.\n\nThe Judge defines and applies coherence criteria. It scores candidate operations — new links, revisions, syntheses, traversal proposals — and decides whether they pass, fail, or require revision.\n\nThe Judge does not generate knowledge. It validates knowledge. This separation prevents creative agents from hallucinating structure unchecked.\n\nGlobal evaluation criteria therefore act as the system’s internal integrity contract, ensuring that growth remains aligned, consistent, and trustworthy.",
     "axiom": "Knowledge systems require evaluative standards.",
 
     "archetypes": [],
@@ -636,7 +808,7 @@
 
     "seedEvent": "Recognition that internal cognitive structures remain limited unless they can be exported into shared, inspectable software systems.",
     "purpose": "Define the transition from private cognition to shared platform.",
-    "body": "Tools that represent cognitive structure internally remain limited if they cannot be externalized into shareable, inspectable systems. A cognitive platform must support exporting internal knowledge representations into interoperable software structures, enabling collaboration, visualization, and collective intelligence.",
+    "body": "Internal cognitive tools remain limited if they exist only inside one mind or one private system.\n\nTo scale understanding, cognitive structures must be externalized — made shareable, inspectable, and interoperable with software systems.\n\nA cognitive platform must therefore support exporting internal knowledge representations into structures that enable:\n\n• collaboration\n• visualization\n• shared reasoning\n• collective intelligence\n\nThis defines the transition from private cognition to shared cognitive architecture.",
     "axiom": "Cognition scales when it becomes shareable.",
 
     "archetypes": [],
@@ -679,7 +851,7 @@
 
     "seedEvent": "Recognition that treating knowledge as continuous documents prevents precise reference, linking, and reorganization of individual ideas.",
     "purpose": "Introduce the idea of storing insights as structured units.",
-    "body": "CAEL represents each insight as a discrete object rather than embedding it inside long documents. Each object encapsulates a single conceptual unit that can be stored, retrieved, linked, and repositioned without losing its meaning. This allows knowledge to be manipulated as a system of parts rather than as static text, enabling future operations such as navigation, comparison, and recombination.",
+    "body": "To address unstructured insight, {{CAEL|CAEL}} proposes storing knowledge as a set of small, structured units instead of long documents.\n\nEach insight is treated as a single {{“atomic” object|atomic insight object}}:\n\n• one object = one idea (as much as possible)\n• it can be stored and retrieved independently\n• it can be linked to other ideas without relying on document context\n\nThis matters because it allows knowledge to be manipulated as a system of parts rather than as static pages.\nFor example, tools can later support:\n\n• navigating from one idea to related ideas\n• comparing ideas side by side\n• reorganizing and recombining ideas into new structures\n\nThe proposal here is conceptual: make “idea units” first-class objects so they can be moved, linked, and reused without losing their meaning.",
     "axiom": "Knowledge becomes navigable when ideas become objects.",
 
     "archetypes": [],
@@ -756,9 +928,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "Recognition that insight objects require predictable internal organization to remain interpretable by both humans and software tools.",
+    "seedEvent": "Recognition that insight objects require {{predictable internal organization|schema}} to remain interpretable by both humans and software tools.",
     "purpose": "Explain that each insight object has consistent internal structure.",
-    "body": "Each insight object follows a consistent internal format that separates origin context, explanatory content, distilled conclusions, and relational references. This internal consistency ensures that insights remain readable, comparable, and processable even as the corpus grows. Structure provides stability without restricting expressive content.",
+    "body": "Once insights are stored as individual objects, each object must remain understandable on its own.\nThis requires predictable internal organization.\n\nEach insight object separates:\n\n• origin context (what caused it to arise)\n• explanatory content (the reasoning or explanation)\n• {{distilled conclusion|axiom}} (the main takeaway)\n• relational references (links to other insights)\n\nThis internal consistency ensures that insights remain readable by humans and processable by software — even as the {{knowledge base|mesh}} grows large.\n\nStructure here does not restrict expression.\nIt simply guarantees that meaning can always be located in expected places.",
     "axiom": "Consistency of form preserves freedom of meaning.",
 
     "archetypes": [],
@@ -843,7 +1015,7 @@
 
     "seedEvent": "Recognition that ideas naturally refer to, support, or challenge other ideas, but these relationships remain implicit in conventional knowledge systems.",
     "purpose": "Introduce explicit linking between insight objects.",
-    "body": "CAEL allows insight objects to reference one another through explicit relationship links. These links describe how ideas interact — whether one informs another, refines it, depends on it, or contrasts with it. Making relationships explicit transforms isolated ideas into a connected knowledge network.",
+    "body": "Ideas naturally refer to, support, refine, or challenge other ideas.\nTraditional knowledge systems leave these relationships implicit inside text.\n\nCAEL introduces explicit relationship links between insight objects.\nEach link states how two ideas relate — for example:\n\n• one depends on another\n• one refines another\n• one contrasts with another\n\nMaking relationships explicit transforms isolated ideas into a {{connected knowledge network|mesh}} that can be {{navigated|mesh traversal}}, analyzed, and validated.",
     "axiom": "Meaning emerges from visible relationships.",
 
     "archetypes": [],
@@ -909,8 +1081,8 @@
     "updatedAt": "",
 
     "seedEvent": "Recognition that some ideas serve as prerequisites for others, requiring a way to express foundational relationships.",
-    "purpose": "Explain dependency tracking between insights.",
-    "body": "CAEL introduces dependency relationships that indicate when one insight relies on another. These foundational links allow reasoning paths to be traced, assumptions to be inspected, and conceptual scaffolding to be made visible. Dependencies create transparent knowledge inheritance rather than hidden assumption chains.",
+    "purpose": "Explain {{dependency tracking|lemmas}} between insights.",
+    "body": "Some ideas serve as foundations for others.\nWithout them, later conclusions cannot be properly understood.\n\nCAEL introduces dependency relationships to make these foundations explicit.\nWhen one insight relies on another, a dependency link records that relationship.\n\nThis allows:\n\n• reasoning paths to be traced\n• assumptions to be inspected\n• conceptual scaffolding to become visible\n\nInstead of hidden assumption chains, knowledge inheritance becomes transparent.",
     "axiom": "Reliable reasoning requires traceable foundations.",
 
     "archetypes": [],
@@ -989,7 +1161,7 @@
 
     "seedEvent": "Recognition that large knowledge collections require organized grouping to remain browsable without collapsing relational complexity.",
     "purpose": "Introduce categorization systems.",
-    "body": "CAEL groups insight objects into consistent classification structures such as domains, categories, and thematic families. These groupings provide multiple entry points for exploration while preserving the underlying network of links. Classification supports orientation without flattening meaning.",
+    "body": "Graph links show how ideas relate.\nBut users also need simple entry points to begin exploration.\n\nCAEL therefore groups insight objects into classification structures such as {{domains, categories, and thematic families|taxonomy classification}}.\n\nThese groupings:\n\n• provide multiple starting points for exploration\n• keep large collections browsable\n• preserve the underlying network of links\n\nClassification does not replace relational structure.\nIt simply adds an orientation layer so users can explore without needing to understand the full graph.",
     "axiom": "Organization guides navigation, not definition.",
 
     "archetypes": [],
@@ -1050,7 +1222,7 @@
 
     "seedEvent": "Recognition that rigid classification alone cannot capture the flexible, evolving associations between ideas.",
     "purpose": "Explain lightweight semantic labeling.",
-    "body": "In addition to formal categories, CAEL supports free-form tags that label insights with relevant keywords or descriptors. Tags enable rapid filtering, discovery, and cross-cutting connections without requiring strict hierarchy. This adds agility to the knowledge structure.",
+    "body": "Formal taxonomies provide stable structure.\nBut they cannot capture every evolving association between ideas.\n\nThe system therefore supports {{tags|tags}} — free-form keyword labels attached to insight objects.\n\nTags allow:\n\n• rapid filtering\n• informal grouping across topics\n• discovery of related ideas without strict hierarchy\n\nThis adds agility to the {{mesh|mesh}} while preserving underlying structure.",
     "axiom": "Flexibility in labeling supports evolving meaning.",
 
     "archetypes": [],
@@ -1110,8 +1282,8 @@
     "updatedAt": "",
 
     "seedEvent": "Recognition that ideas develop through refinement, extension, and reinterpretation, requiring preservation of their developmental paths.",
-    "purpose": "Describe tracking how insights evolve over time.",
-    "body": "CAEL records how insights change across versions or descendants. Rather than replacing earlier ideas, new insights reference and build upon them. This produces visible chains of conceptual evolution, allowing users to understand not only what is known, but how it became known.",
+    "purpose": "Describe tracking how .rev insights evolve over time.",
+    "body": "Ideas change over time.\nThey are refined, extended, or reinterpreted as understanding grows.\n\nCAEL records these changes instead of overwriting them.\nNew .rev insights reference and build upon earlier ones, forming visible chains of conceptual evolution.\n\nThis allows users to see:\n\n• what is currently believed\n• how that belief developed\n• which earlier assumptions led to later conclusions\n\nKnowledge becomes not just a collection of results, but a preserved developmental path.",
     "axiom": "Understanding deepens when history is preserved.",
 
     "archetypes": [],
@@ -1164,9 +1336,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "Recognition that once insights and relationships are explicit, knowledge naturally forms a network rather than a hierarchy or list.",
+    "seedEvent": "Once insights and relationships are explicit, knowledge naturally forms a network rather than a hierarchy or list.",
     "purpose": "Introduce the network model.",
-    "body": "By treating insights as nodes and relationships as edges, CAEL represents knowledge as a graph. This network structure supports both human visualization and computational analysis, revealing clusters, pathways, and central ideas that would otherwise remain hidden.",
+    "body": "Once insights and their relationships are made explicit, knowledge naturally forms a network rather than a list or hierarchy.\n\nCAEL represents:\n\n• {{insights as nodes|.rev}}\n• {{relationships|links}} as edges\n\nThis produces a graph representation of knowledge.\n\nGraph structure supports:\n\n• human visualization of idea networks\n• computational analysis of connectivity\n• discovery of clusters, pathways, and central ideas\n\nMapping knowledge as a network reveals structure that linear text cannot show.",
     "axiom": "Knowledge becomes intelligible when mapped as a network.",
 
     "archetypes": [],
@@ -1233,7 +1405,7 @@
 
     "seedEvent": "Recognition that networked knowledge requires new interaction models beyond scrolling or searching documents.",
     "purpose": "Explain exploration through interfaces.",
-    "body": "CAEL provides interactive ways to move through connected insights. Users explore relationships, follow dependency paths, and shift perspectives across categories. Navigation becomes exploratory rather than sequential, enabling discovery-driven learning.",
+    "body": "Traditional knowledge tools emphasize retrieval: search, open, read.\n\nConnected knowledge requires something different — exploration.\n\nCAEL provides {{interactive navigation|traversal}} through linked insights.\nUsers can:\n\n• follow relationships between ideas\n• traverse dependency paths\n• shift perspective across categories\n\nNavigation becomes exploratory rather than sequential.\nLearning happens through discovery, not just lookup.",
     "axiom": "Exploration replaces retrieval when knowledge is connected.",
 
     "archetypes": [],
@@ -1306,7 +1478,7 @@
 
     "seedEvent": "Recognition that explicit links cannot capture every meaningful association between ideas.",
     "purpose": "Introduce future semantic mapping.",
-    "body": "CAEL anticipates representing insight content in semantic vector spaces, allowing the system to estimate conceptual similarity even when no manual relationship exists. This supports suggestion of related ideas and discovery of latent connections.",
+    "body": "Explicit links capture only relationships that were manually declared.\nMany meaningful connections remain unstated.\n\nCAEL anticipates representing insight content as semantic embeddings — numerical vectors that encode meaning.\n\nIn such representations:\n\n• similar ideas produce nearby vectors\n• distant ideas produce far-apart vectors\n\nThis allows the system to estimate conceptual similarity even when no explicit relationship exists.\n\n{{Semantic embeddings|semantic embedding}} support discovery of latent connections and suggestion of related insights.",
     "axiom": "Hidden relationships can be surfaced through shared meaning.",
 
     "archetypes": [],
@@ -1373,7 +1545,7 @@
 
     "seedEvent": "Recognition that large knowledge networks exhibit structural properties that affect how information flows and evolves.",
     "purpose": "Introduce graph analytics capabilities.",
-    "body": "CAEL supports analysis of graph properties such as clustering, centrality, and connectivity. These structural signals help identify foundational insights, knowledge gaps, and emerging themes, guiding further exploration and development.",
+    "body": "Once knowledge is represented as a graph, its structure can be measured.\n\nGraph-based analysis examines properties such as:\n\n• clustering of related ideas\n• centrality of foundational insights\n• connectivity across regions of the network\n• high {{activation|activation}} regions or chains\n\nThese structural signals help identify:\n\n• core foundations\n• underdeveloped areas\n• emerging conceptual themes\n\nStructural analysis allows the system to see patterns that manual browsing would miss.",
     "axiom": "Patterns become visible when structure is measured.",
 
     "archetypes": [],
@@ -1440,7 +1612,7 @@
 
     "seedEvent": "Recognition that structured, networked knowledge representation can extend beyond individual use into shared cognitive systems.",
     "purpose": "Define the broader platform direction.",
-    "body": "While CAEL begins as a personal knowledge environment, the same underlying model can support teams, organizations, and communities. Shared insight objects and relational graphs enable collective sense-making, collaborative learning, and institutional memory without losing traceability.",
+    "body": "A structured knowledge system may begin as personal.\nBut the same structure can support groups and communities.\n\n{{CAEL|CAEL}} is designed so shared insight objects and relationship graphs can enable:\n\n• team sense-making\n• collaborative learning\n• institutional memory\n\nShared structure allows knowledge to scale socially without losing traceability.",
     "axiom": "Cognition scales when structure is shared.",
 
     "archetypes": [],
@@ -1523,8 +1695,8 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "After separating knowledge into atomic insight objects, it became clear that without a standardized internal schema, objects could not be reliably parsed, displayed, or processed across tools.",
-    "body": "CAEL requires every insight object to follow a standardized internal schema. This canonical form specifies which fields exist, how they are named, what type of content they hold, and how they may be extended. The purpose is not to constrain expression, but to ensure interoperability: any tool, interface, or algorithm interacting with the knowledge base can assume a stable structure. Without a canonical form, insight objects drift in shape over time. Fields become optional in inconsistent ways, naming conventions diverge, and automated operations become fragile. By fixing a canonical schema, CAEL ensures that parsing, indexing, filtering, linking, visualization, and embedding pipelines can be built once and relied upon indefinitely. Canonical form is therefore the foundation that turns a collection of insights into a durable knowledge system rather than a loose archive of notes.",
+    "seedEvent": "After separating knowledge into {{atomic insight objects|atomic insight object}}, it became clear that without a standardized internal schema, objects could not be reliably parsed, displayed, or processed across tools.",
+    "body": "Once insights are stored as separate objects, they still need a consistent internal shape.\nIf every object is formatted differently, software cannot reliably display or process them.\n\n{{CAEL|CAEL}} therefore requires a canonical schema: a standardized set of fields with stable names and expected content types. Each object is appended with a .rev file extension suffix, marking it as a {{'recursive event file'|.rev}}.\n\nThis schema exists to guarantee interoperability — meaning any tool can assume the object has the same structure every time.\n\nWithout a canonical form, objects drift over time:\n\n• different objects use different field names\n• some fields become inconsistently optional\n• automated processing becomes fragile and error-prone\n\nA stable schema makes it possible to build durable operations once, such as:\n\n• parsing and rendering\n• indexing and filtering\n• linking and graph views\n• visualization and future {{embedding|embedding}} workflows\n\nLater in the system, multiple specialized reasoning services will operate over these objects. A canonical form ensures each service receives predictable inputs and produces valid outputs.\n\nThe goal is not to constrain expression, but to ensure structured knowledge remains machine-operable as the system grows.",
     "purpose": "Define a canonical internal architecture for insight objects that guarantees consistent machine-readability and predictable interpretation.",
     "axiom": "A system can only reason about what is shaped consistently.",
 
@@ -1580,7 +1752,7 @@
 
     "seedEvent": "Once a canonical object form was established, inconsistent field usage across insight objects still caused ambiguity in how meaning, origin, and relationships were recorded.",
     "purpose": "Formalize the required internal fields of insight objects so identity, origin, meaning, and connectivity are always explicitly represented.",
-    "body": "Each CAEL insight object contains a defined set of core fields. These include: seedEvent (what triggered the insight), purpose (why it exists), body (the explanatory content), archetypes (which cognitive roles are involved), links (relationships to other insights), and metadata (timestamps, confidence, activation state). Requiring these fields ensures that every insight records not only its content, but also its origin, intent, and relational context. This makes later interpretation possible without relying on memory or external documentation. It also allows tools to query insights by origin type, confidence level, topic category, or relationship pattern. Structured fields transform knowledge from informal writing into a dataset that supports navigation, computation, and long-term maintenance.",
+    "body": "A schema only helps if the important information is recorded consistently.\n{{The system|CAEL}} therefore specifies a set of core fields that every {{insight object|atomic insight object}} should include.\n\nThese fields capture not only the idea itself, but also the context needed to interpret it later:\n\n• seedEvent — what triggered the insight\n• purpose — why this object exists\n• body — the explanation in human-readable form\n• links — relationships to other insight objects\n• metadata — fields like timestamps and confidence\n• {{archetypes|archetypal cognitive roles}} — which cognitive functions were active in forming the insight\n\nRequiring these fields reduces ambiguity over time.\nIt prevents knowledge from becoming “orphaned text” that only makes sense to the author in the moment.\n\nRecording archetypal cognitive roles serves a second purpose:\n\n• it captures *how* a human arrived at an idea\n• it allows later systems to recognize which reasoning functions were used\n\nThis creates the foundation for software that can route, evaluate, or assist thinking processes rather than only storing their outputs.\n\n{{Structured fields|schema}} turn informal writing into a dataset that can be navigated, queried, and extended.",
     "axiom": "Explicit fields preserve meaning across time.",
 
     "archetypes": [],
@@ -1639,9 +1811,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As insight objects began evolving through revisions, it became unclear how to preserve references, links, and lineage when objects changed or were rewritten.",
+    "seedEvent": "As insight objects began evolving through revisions, it became unclear how to preserve references, links, and {{lineage|lineage rank}} when objects changed or were rewritten.",
     "purpose": "Define identity, permanence, and versioning rules for insight objects so references remain stable even as content evolves.",
-    "body": "Every CAEL insight object is assigned a persistent identifier. This identifier never changes, even if the content of the object is updated. Version fields record evolution over time, allowing new revisions without breaking existing links or references. Identity persistence ensures that relationship graphs remain valid, genealogy chains remain traceable, and external systems can safely reference insight objects. Without persistent identity, updates would fracture the network: links would decay, histories would be lost, and structural continuity would fail. This .rev establishes the principle that content may evolve, but identity remains anchored.",
+    "body": "Every CAEL insight object is assigned a {{persistent identifier|.rev}}, or id. This identifier never changes, even if the content of the object is updated. Version fields record evolution over time, allowing new revisions without breaking existing links or references. {{Identity persistence|identity persistence}} ensures that relationship graphs remain valid, {{genealogy chains|genealogy indexing}} remain traceable, and external systems can safely reference insight objects. Without persistent identity, updates would fracture the network: links would decay, histories would be lost, and structural continuity would fail. This {{.rev|.rev}} establishes the principle that content may evolve, but identity remains anchored.",
     "axiom": "Meaning may change; identity must not.",
 
     "archetypes": [],
@@ -1702,7 +1874,7 @@
 
     "seedEvent": "During archival and public-sharing preparation, it became necessary to present clean insight objects without exposing private iteration history or intermediate drafts.",
     "purpose": "Define how historical revision data is retained internally but optionally suppressed for external or archival presentation.",
-    "body": "Insight objects may accumulate internal histories: draft states, partial revisions, experimental content, or private annotations. While this information is valuable for internal development, it is not always appropriate for external distribution, public corpora, or finalized archives. The history suppression protocol specifies when and how history fields may be blanked, redacted, or detached from exported objects while preserving the integrity of the canonical form. This allows CAEL to maintain full internal provenance while distributing clean, stable knowledge artifacts externally. This protocol ensures that archival clarity and privacy can coexist with internal traceability.",
+    "body": "Over time, insight objects may accumulate internal process history:\n\n• drafts\n• partial revisions\n• experimental versions\n• private notes or annotations\n\nThat history can be valuable internally, but it is not always appropriate to share publicly or include in a clean exported {{archive|mesh}}.\n\nThe history suppression protocol defines how a system can export “clean” insight objects while preserving internal traceability.\nFor example:\n\n• history fields may be blanked or detached during export\n• private annotations may be redacted\n• the exported object still preserves its stable {{identity|.rev}} and {{canonical structure|schema}}\n\nThis allows two goals to coexist:\n\n• internal provenance and iteration history remain available\n• external presentation stays clear, stable, and privacy-safe",
     "axiom": "Not all process must be published for knowledge to remain valid.",
 
     "archetypes": [],
@@ -1756,8 +1928,8 @@
     "updatedAt": "",
 
     "seedEvent": "Once canonical form and required fields were defined, it became necessary to specify a precise contract describing how each field must behave so software tools and human readers interpret objects consistently.",
-    "purpose": "Define the field-level schema contract that guarantees interoperability between human-authored insight objects and software systems that parse, validate, and operate on them.",
-    "body": "A canonical form is only reliable if each field has clearly defined expectations. The schema contract specifies field names, data types, allowed values, optional versus required status, and validation rules. This ensures that insight objects can be safely created, edited, transmitted, stored, and processed without ambiguity. For humans, the contract provides predictable authoring conventions. For software, it enables automatic validation, migration, indexing, and transformation. When schema contracts are explicit, tools can evolve independently without breaking stored knowledge. The schema contract therefore functions as the handshake between cognitive expression and computational processing.",
+    "purpose": "Define the {{field-level schema contract|schema}} that guarantees interoperability between {{human-authored insight objects|.rev}} and {{software systems that parse, validate, and operate on them||CAEL}}.",
+    "body": "A standardized object form only works if every field behaves predictably.\n\nA schema contract defines exactly how each field must be written and interpreted:\n\n• field names\n• data types\n• allowed values\n• which fields are required vs optional\n• validation rules\n\nThis contract serves two audiences:\n\n• humans — providing consistent authoring conventions\n• software — enabling automatic validation, storage, parsing, and transformation\n\nWhen schema contracts are explicit, tools can evolve independently without breaking stored knowledge.\n\nLater in the system, specialized services will read, transform, evaluate, and route insight objects. A schema contract guarantees these services interact safely rather than unpredictably.\n\nThe schema contract therefore acts as the handshake between human-authored insight objects and computational processes that operate on them.",
     "axiom": "Interoperability requires explicit contracts.",
 
     "archetypes": [],
@@ -1805,8 +1977,8 @@
     "updatedAt": "",
 
     "seedEvent": "As insight objects accumulated, it became clear that understanding why an insight arose was as important as the insight content itself, yet origin conditions were being recorded inconsistently.",
-    "purpose": "Formalize how originating conditions of insight objects are captured so the causal context of knowledge creation remains inspectable.",
-    "body": "The seedEvent field records the originating trigger for an insight. This may be an observation, contradiction, question, failure, external event, or internal realization. The seed event is not the insight itself, but the condition that caused it to emerge. By formalizing seed event recording, CAEL preserves causal traceability. Later readers can distinguish between speculative ideas, reactive discoveries, planned design decisions, or externally prompted realizations. This enables historical analysis of knowledge development and supports auditing how conclusions were reached. The seed event model turns insight objects from static notes into documented responses to specific conditions.",
+    "purpose": "Formalize how {{originating conditions of insight objects|seed event}} are captured so the causal context of knowledge creation remains inspectable.",
+    "body": "An insight is easier to understand when we know what caused it to appear.\n\nThe seedEvent field records the triggering condition behind an insight.\n\nThis may be:\n\n• an observation\n• a contradiction\n• a question\n• a failure\n• an external event\n• an internal realization\n\nThe seed event is not the insight itself.\nIt is the situation that called the insight into existence.\n\nBy recording seed events consistently, CAEL preserves causal traceability.\nLater readers can see whether an idea emerged from speculation, evidence, design intent, or response to a problem.\n\nThis turns insight objects from static notes into documented responses to specific conditions.",
     "axiom": "Understanding an idea requires knowing what called it into existence.",
 
     "archetypes": [],
@@ -1862,7 +2034,7 @@
 
     "seedEvent": "As insight bodies grew longer and more explanatory, it became difficult to quickly identify the distilled conclusion or governing principle within each object.",
     "purpose": "Define how concise axioms are extracted from explanatory body text to provide a high-signal summary of each insight.",
-    "body": "The axiom field captures the distilled conclusion of an insight object in a short, declarative statement. While the body explains reasoning, context, and nuance, the axiom records the core claim in minimal form. Separating axioms from body text enables rapid scanning, indexing, summarization, and comparison of insights. It also allows downstream systems to reason over conclusions without reprocessing full explanatory content. Axiom extraction therefore creates a two-layer representation: narrative explanation for understanding, distilled principle for computation and navigation.",
+    "body": "Insight bodies often contain explanation, nuance, and reasoning.\nBut readers and software tools also benefit from {{a concise statement of the core conclusion|axiom}}.\n\nThe axiom field stores this distilled principle in a short declarative form.\n\nThis creates two complementary layers:\n\n• body — narrative explanation for human understanding\n• axiom — compact conclusion for scanning and computation\n\nSeparating these layers allows:\n\n• rapid browsing of key ideas\n• easier comparison between insights\n• downstream reasoning without reprocessing long text\n\nAxiom extraction therefore improves both human readability and machine usability.",
     "axiom": "Every explanation benefits from a clear conclusion.",
 
     "archetypes": [],
@@ -1912,9 +2084,8 @@
 
     "seedEvent": "After introducing cognitive-role labels for insight objects, inconsistencies appeared in how and when these labels were assigned.",
     "purpose": "Define rules for attaching cognitive-role (archetype) labels to insight objects so role-based reasoning and filtering remain coherent.",
-    "body": "Archetype assignment logic specifies how cognitive-role labels are applied to insight objects. Labels indicate which modes of reasoning, evaluation, or action the insight primarily engages. This is not personality typing; it is functional annotation for reasoning workflows. Formalizing assignment rules prevents arbitrary or drifting label usage. It ensures that filtering by role, routing tasks to specialized reasoning modules, and analyzing cognitive balance across the knowledge base remain meaningful. Archetype assignment logic thus provides consistent semantic indexing of how insights function within a reasoning system.",
-    "axiom": "Labels must follow rules to carry meaning.",
-
+    "body": "Complex reasoning is not performed by a single uniform cognitive process.\nHumans shift between different cognitive postures — expressing truth, detecting harm, asserting boundaries, abstracting patterns, evaluating consistency, committing to action, and maintaining long-term direction.\n\nModeling each posture directly at the level of low-level behaviors would produce an unwieldy system.\n\nInstead, CAEL uses archetypal roles as symbolic abstractions — compact stand-ins for bundled cognitive functions.\n\nEach archetype represents a recognizable mode of human sense-making, allowing the system to refer to rich behavioral patterns with a single, stable label.\n\nThe twelve archetypal roles correspond to:\n\n• Watcher — meta-awareness and state observation\n• Lover — truthful expression and connection initiation\n• Orphan — detection of harm, lack, or unmet need\n• Rebel — boundary assertion and autonomy protection\n• Warrior — decisive execution and conflict resolution\n• Sage — abstraction and pattern modeling\n• Magician — reframing and symbolic recomposition\n• Trickster — play, perturbation, and loop-breaking\n• Judge — evaluation, consistency checking, integrity enforcement\n• King — priority selection and goal arbitration\n• Devotee — long-horizon commitment and continuity maintenance\n• Architect — structural design and system integration\n\nWhen a user creates or refines an insight, linguistic cues, intent markers, and interaction context reveal which cognitive postures were active in forming the idea.\n\nCAEL parses these language patterns and records archetypal participation alongside the insight.\n\nThis serves three purposes:\n\n• preserving how an idea was reached, not only what it states\n• informing traversal and explanation strategies based on cognitive context\n• enabling later runtime systems to route tasks to specialized reasoning roles\n\nArchetype assignment logic defines the rules by which these labels are applied, preventing drift or arbitrary usage.\n\nBy using symbolic archetypes as cognitive shorthand, CAEL gains expressive power without behavioral complexity — a compact interface to human reasoning dynamics that remains stable as the system scales.",
+    "axiom": "Symbolic roles provide stable interfaces for complex reasoning.",
     "archetypes": [],
     "tags": [],
 
@@ -1959,9 +2130,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As insight networks became dynamic, it became necessary to track which insights were currently active, trusted, or central versus dormant or tentative.",
+    "seedEvent": "As insight networks become dynamic, it is useful to track which insights are currently active, trusted, or central versus dormant or tentative.",
     "purpose": "Define metadata fields that track activation state, confidence, and lineageRank so system behavior can adapt to knowledge maturity and relevance.",
-    "body": "Metadata fields provide quantitative signals about each insight object. Activation tracks current relevance or usage. Confidence represents trust or validation level. LineageRank encodes genealogical depth or foundational importance. These fields allow CAEL to prioritize traversal, recommend relevant insights, detect emerging clusters, and distinguish stable foundations from experimental ideas. Metadata transforms a static graph into a living knowledge system responsive to usage patterns and maturation over time. The activation model thus enables adaptive knowledge navigation rather than fixed archives.",
+    "body": "A growing knowledge system is not static.\nSome insights become central and trusted.\nOthers remain tentative or fall out of use.\n\nMetadata fields record quantitative signals about each insight object:\n\n• activation — how currently relevant or used an insight is\n• confidence — how trusted or validated it is\n• lineageRank — how foundational it is in the {{genealogy|genealogy indexing}} of ideas\n\nThese signals allow the system to:\n\n• prioritize {{navigation paths|links}}\n• recommend relevant {{insights|semantic relatedness}}\n• detect {{emerging topic clusters|taxonomy classification}}\n• distinguish {{stable foundations|node gravity}} from experimental ideas\n\nMetadata therefore turns a static knowledge graph into a living system that adapts as understanding evolves.",
     "axiom": "Knowledge systems need state, not just structure.",
 
     "archetypes": [],
@@ -2009,9 +2180,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "Once insight objects began referencing each other, inconsistent link formats made it difficult for software and users to interpret relationships reliably.",
+    "seedEvent": "Once insight objects begin referencing each other, inconsistent link formats can make it difficult for software and users to interpret relationships reliably.",
     "purpose": "Define the standardized internal structure of link objects so relationships between insight objects are consistently represented, readable, and machine-processable.",
-    "body": "A link object records a directed relationship from one insight object to another. Each link contains four required fields: • targetId — the unique identifier of the referenced insight object • type — the semantic category of the relationship • note — a short human-readable explanation of why the link exists • confidence — a numeric weight representing relationship certainty or strength This structure allows links to carry both formal meaning (for software) and explanatory meaning (for humans). Typed relationships enable filtering, traversal logic, dependency resolution, and visualization. Notes preserve interpretive context without requiring external documentation. The links object model therefore defines the atomic unit of connection in the knowledge mesh.",
+    "body": "Once insight objects link to one another, links themselves must have consistent structure.\nOtherwise software and users cannot interpret relationships reliably.\n\nA link object represents a directed relationship from one insight object to another.\nEach link contains:\n\n• targetId — the {{unique identifier|.rev}} of the referenced insight\n• type — the category of relationship\n• note — a short human-readable explanation\n• confidence — a numeric estimate of relationship strength\n\nThis structure allows links to carry:\n\n• formal meaning for software (type, targetId, confidence)\n• explanatory meaning for humans (note)\n\nStandardized links enable filtering, dependency resolution, traversal logic, and graph visualization.\n\nThe link object is the atomic unit of connection in the knowledge mesh.",
     "axiom": "Relationships require structure to remain intelligible.",
 
     "archetypes": [],
@@ -2055,7 +2226,7 @@
 
     "seedEvent": "As link types expanded, it became necessary to define a controlled vocabulary of relationship semantics to prevent drift and ambiguity.",
     "purpose": "Define the standardized relationship types used to express dependency, refinement, inheritance, and semantic association between insight objects.",
-    "body": "Lemma architecture establishes a defined set of link types that express how insights relate. Common categories include: • depends-on — one insight requires another as a prerequisite • refines — one insight elaborates or sharpens another • corollary — one insight follows logically from another • inherits-from — one insight extends a broader foundational concept • informs — one insight provides supporting context By standardizing relationship semantics, CAEL ensures that dependency chains are computable, reasoning paths are traceable, and graph algorithms can operate meaningfully across the network. Lemma architecture therefore functions as the grammar of conceptual dependency.",
+    "body": "As relationship links increase, their meanings must remain consistent. Otherwise link types drift and become ambiguous.\n\n{{Lemma architecture|lemmas}} defines a controlled vocabulary of relationship types that describe how insights relate.\nCommon categories include:\n\n• depends-on — one insight requires another as a prerequisite\n• refines — one insight sharpens another\n• corollary — one insight follows logically from another\n• inherits-from — one insight extends a foundational concept\n• informs — one insight provides supporting context\n\nBy standardizing relationship semantics, the system ensures:\n\n• dependency chains are computable\n• reasoning paths are traceable\n• graph algorithms operate meaningfully\n\nLemma architecture functions as the grammar of conceptual dependency.\n\nLater, reasoning services will rely on these relationship types to decide how to interpret, rank, or explain connected insights. Consistent lemma semantics ensure that automated reasoning follows the same logic a human would expect.",
     "axiom": "A network requires a shared grammar to carry meaning.",
 
     "archetypes": [],
@@ -2096,9 +2267,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As networks of linked insight objects grew, inconsistencies appeared: circular dependencies, orphan nodes, and ambiguous relationship patterns.",
+    "seedEvent": "As the mesh network grows, inconsistencies can appear: circular dependencies, orphan nodes, and ambiguous relationship patterns.",
     "purpose": "Define structural rules that ensure the knowledge network remains coherent, navigable, and logically consistent.",
-    "body": "Mesh topology rules specify allowable patterns of relationships between insight objects. These rules constrain how dependencies may form, how inheritance chains behave, and how cycles are permitted or flagged. Examples include: • Preventing unresolved dependency loops • Ensuring every node has at least one inbound or outbound semantic relationship • Restricting contradictory link types between the same node pair • Marking retroactive or bidirectional links explicitly when allowed Topology rules allow automated validation of the network, detection of structural errors, and predictable behavior for traversal and visualization tools. This ensures the mesh remains a consistent system rather than a tangled collection of references.",
+    "body": "Mesh topology rules define which relationship patterns are allowed.\nThey specify, for example:\n\n• when dependency loops are forbidden or flagged\n• whether every insight must have at least one {{semantic connection|links}}\n• when bidirectional or retroactive links are permitted\n\nThese rules allow software to:\n\n• validate the network automatically\n• detect structural errors\n• ensure predictable traversal and visualization\n\nTopology rules keep the knowledge mesh {{coherent|coherence}} rather than tangled.",
     "axiom": "Structure must be governed to remain navigable.",
 
     "archetypes": [],
@@ -2139,9 +2310,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As the archive expanded, it became clear that many valid relationships between insights existed implicitly but were not manually encoded.",
+    "seedEvent": "As the archive expands, valid relationships between insights exist implicitly, but are not always manually encoded.",
     "purpose": "Define how software can algorithmically suggest probable missing links between insight objects.",
-    "body": "Link inference logic analyzes text similarity, shared tags, taxonomy overlap, dependency patterns, and lineage proximity to propose candidate relationships. These suggestions may then be accepted, rejected, or refined by users. Automated inference accelerates network formation, reveals hidden conceptual clusters, and reduces manual curation effort. Confidence scores allow probabilistic handling rather than assuming correctness. Link inference transforms the knowledge mesh from a fully hand-wired system into a semi-self-organizing structure guided by both human judgment and computational suggestion.",
+    "body": "In large knowledge collections, many valid relationships remain unstated.\nManually adding every link becomes impractical.\n\nLink inference allows software to suggest likely missing relationships by analyzing:\n\n• text similarity\n• shared tags or categories\n• existing dependency patterns\n• genealogical proximity of ideas\n\nSuggested links can then be accepted, rejected, or refined by users.\nConfidence scores prevent assuming automatic correctness.\n\nLink inference accelerates network formation and reveals hidden {{conceptual clusters|node clustering}}, while keeping humans in control of meaning.",
     "axiom": "Not all connections must be drawn by hand.",
 
     "archetypes": [],
@@ -2190,7 +2361,7 @@
 
     "seedEvent": "After typed links were introduced, it became necessary to distinguish casual relationships from prerequisite relationships. Some insights cannot be correctly understood without first understanding others. A formal dependency graph was required to represent this.",
     "purpose": "Define how CAEL represents prerequisite relationships among insight objects as a directed dependency graph.",
-    "body": "The lemma dependency graph is a directed network where nodes represent insight objects and edges represent prerequisite relationships. When one insight depends on another, a directed edge is created from the dependent insight to its prerequisite. This structure allows CAEL to: • Represent chains of reasoning explicitly • Detect missing foundations when reading or retrieving insights • Prevent circular or self-contradictory dependency chains • Provide ordered learning or explanation sequences Unlike general semantic links, dependency edges assert that understanding or validity flows in a specific direction. This transforms the knowledge graph from a web of associations into an inspectable reasoning structure.",
+    "body": "Not all relationships between ideas are equal.\nSome ideas are casual associations.\nOthers are strict prerequisites.\n\nThe lemma dependency graph represents prerequisite relationships explicitly.\n\nIn this graph:\n\n• nodes represent insight objects\n• directed edges represent “depends-on” relationships\n\nWhen one insight depends on another, an edge points toward its prerequisite.\n\nThis allows the system to:\n\n• represent reasoning chains explicitly\n• detect missing foundations\n• prevent circular or self-contradictory dependencies\n• generate ordered learning or explanation sequences\n\nUnlike general semantic links, dependency edges assert that understanding flows in a specific direction.\nThis transforms a web of ideas into an inspectable reasoning structure.",
     "axiom": "Reasoning becomes reliable when prerequisites are explicit.",
 
     "archetypes": [],
@@ -2237,9 +2408,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As dependency graphs grew, some insights clearly served as deeper foundations than others. A quantitative method was needed to estimate how structurally foundational an insight is across the corpus.",
-    "purpose": "Define how CAEL computes a foundational weight score (lineageRank) for insight objects based on their position in dependency chains.",
-    "body": "LineageRank is a numeric score representing how foundational an insight is within the dependency graph. Insights with many downstream dependents receive higher lineageRank values, while insights that depend heavily on others receive lower values. This score supports several functions: • Identifying core foundational insights • Prioritizing which insights should be learned first • Weighting nodes when computing coherence or centrality • Helping visualization systems emphasize structural anchors LineageRank is computed using graph traversal methods similar to influence or centrality measures, but constrained specifically to dependency edges rather than general semantic links.",
+    "seedEvent": "As dependency graphs grow, some insights clearly serv as deeper foundations than others. A quantitative method is needed to estimate how structurally foundational an insight is across the {{corpus|mesh}}.",
+    "purpose": "Define how CAEL computes a foundational weight score ({{lineageRank|lineage rank}}) for insight objects based on their position in dependency chains.",
+    "body": "Within a dependency graph, some insights act as deeper foundations than others. A quantitative signal is needed to express this.\n\nlineageRank is a numeric score representing how foundational an insight is.\n\nIn general:\n\n• insights with many downstream dependents receive higher lineageRank\n• insights that rely heavily on others receive lower lineageRank\n\nThis score supports:\n\n• identifying core foundational insights\n• prioritizing learning or onboarding order\n• weighting nodes in coherence or centrality calculations\n• emphasizing {{structural anchors|node gravity}} in visualization\n\nLineageRank is computed using graph traversal methods applied specifically to dependency edges. It measures foundation depth, not general popularity.\n\nReasoning services may use lineageRank to decide which insights to explain first, which to treat as axioms, and which to summarize rather than expand.\n\n*Important note*: In this onboarding mesh, lineageRank is temporarily used as a sequential step-function for introducing CAEL’s architecture, rather than its eventual runtime calculation.",
     "axiom": "Foundations reveal themselves through what rests upon them.",
 
     "archetypes": [],
@@ -2282,7 +2453,7 @@
 
     "seedEvent": "Once dependency chains and lineageRank were defined, it became possible to construct a complete ancestry and descent index across the insight corpus. A dedicated structure was needed to store and query these relationships efficiently.",
     "purpose": "Define how CAEL indexes ancestry, descent, and lemma lineage relationships across all insight objects.",
-    "body": "The genealogy index is a registry that records ancestor and descendant relationships derived from the dependency graph. For any insight object, the system can query: • Which insights it depends on (its ancestors) • Which insights depend on it (its descendants) • How deep in the lineage chain it sits • Whether multiple independent lineages converge This index enables: • “What had to be true for this to exist?” queries • Historical tracing of idea development • Detection of structural gaps in reasoning • Narrative or educational reconstruction of knowledge evolution Rather than storing only direct edges, the genealogy index stores transitive lineage information for efficient retrieval and visualization.",
+    "body": "Once dependency chains and lineageRank exist, full ancestry across ideas can be derived.\n\nThe {{genealogy index|genealogy index}} stores this ancestry information so it can be queried efficiently.\nFor any insight, the system can ask:\n\n• which insights it depends on (lemma_of)\n• which insights depend on it (lemma_for)\n• how deep it sits in {{lineage chains|lineage rank}}\n• where independent lineages converge\n\nThis enables:\n\n• “What had to be true for this to exist?” queries\n• reconstruction of idea development history\n• detection of missing reasoning steps\n• educational or narrative explanation of knowledge evolution\n\nRather than storing only direct edges, the index stores transitive lineage for fast retrieval and visualization.",
     "axiom": "Every idea has a traceable ancestry.",
 
     "archetypes": [],
@@ -2331,7 +2502,7 @@
 
     "seedEvent": "With dependency graphs and genealogy indexing in place, CAEL required a formal method for how prerequisite paths are followed during retrieval, explanation, or learning.",
     "purpose": "Define how CAEL traverses dependency chains to assemble prerequisite context when retrieving or explaining an insight.",
-    "body": "Dependency traversal logic specifies how CAEL walks the lemma dependency graph when preparing context for a user or subsystem. Traversal rules define: • How far upward through prerequisites to climb • When to stop traversal based on user familiarity or context window limits • How to avoid redundant or cyclic traversal • How to order retrieved prerequisites for explanation or onboarding This allows CAEL to dynamically assemble “just enough foundation” for any insight. Instead of showing isolated information, the system can reconstruct the reasoning ladder that supports it.",
+    "body": "Knowing dependency structure is only useful if the system can walk it.\n\nDependency traversal logic defines how {{CAEL|CAEL}} follows prerequisite chains when retrieving or explaining an insight.\nTraversal rules specify:\n\n• how far upward through prerequisites to climb\n• when to stop based on user familiarity or context limits\n• how to avoid redundant or cyclic traversal\n• how to order prerequisites for explanation or onboarding\n\nThis allows the system to assemble just enough foundation for any insight.\nInstead of presenting isolated information, CAEL reconstructs the reasoning ladder that supports it.\n\nDifferent reasoning modules may request different traversal depths or ordering strategies. Shared dependency traversal logic ensures they all respect the same underlying structure.",
     "axiom": "Context becomes meaningful when its path is reconstructed.",
 
     "archetypes": [],
@@ -2384,9 +2555,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As the insight corpus expanded, links and dependency chains alone were not sufficient for navigation. Users also needed consistent categorical groupings to browse insights by topic, function, or domain.",
+    "seedEvent": "As the insight corpus expands, links and dependency chains alone are not sufficient for navigation. Users also need consistent categorical groupings to browse insights by topic, function, or domain.",
     "purpose": "Define the dimension / family / subfamily classification structure used to organize insight objects into stable taxonomic groupings.",
-    "body": "CAEL uses a three-level taxonomy system to categorize insight objects: • Dimension represents broad domains of concern (for example: cognitive systems, learning processes, runtime architecture). • Family represents a major thematic grouping within a dimension. • Subfamily represents a more specific cluster of related insight types. Taxonomies do not replace link or dependency relationships. Instead, they provide an orthogonal navigation layer that allows users to browse large corpora without requiring knowledge of the underlying graph structure. This separation ensures that: • Conceptual structure (links and lemmas) remains precise • Browsing structure (taxonomy) remains intuitive • Neither layer distorts the other",
+    "body": "Links and dependency chains show how ideas connect.\nBut large collections also require consistent topic groupings to remain browsable.\n\nThe system uses a three-level taxonomy:\n\n• Dimension — broad domains of concern\n• Family — major thematic groupings within a dimension\n• Subfamily — more specific {{clusters|node clustering}} of related insight types\n\nTaxonomy does not replace links or dependency relationships, it supplements them by adding another dimension by which to traverse.\nIt provides an orthogonal navigation layer that allows users to browse by topic or function without knowing the underlying graph.\n\nThis separation ensures:\n\n• conceptual structure ({{links|links}} and {{lemmas|lemmas}}) remains precise\n• browsing structure ({{taxonomy|taxonomy classification}}) remains intuitive\n• neither layer distorts the other",
     "axiom": "Navigation improves when structure and meaning are separated.",
 
     "archetypes": [],
@@ -2429,7 +2600,7 @@
 
     "seedEvent": "Once taxonomies were introduced, inconsistent or ad-hoc classification risked undermining their usefulness. A consistent assignment logic was required.",
     "purpose": "Define the rules by which insight objects are assigned to dimensions, families, and subfamilies.",
-    "body": "Taxonomy assignment rules specify: • Each insight must belong to exactly one dimension • Each insight may belong to one or more families within that dimension • Each insight may optionally belong to a subfamily for finer grouping • Assignment is based on the insight’s primary functional role, not incidental content These rules ensure that classification remains stable as the corpus grows. They also prevent taxonomies from drifting into arbitrary tagging systems, preserving their usefulness for navigation and analytics.",
+    "body": "A classification system only works if it is applied consistently.\n\nTaxonomy assignment rules define how insight objects are placed into categories:\n\n• each insight belongs to exactly one dimension\n• each dimension may have one or more families that belong to it\n• each family may optionally have one or more subfamilies which belong to it\n• assignment is based on the insight’s primary functional role, not incidental content\n\nThese rules prevent classification from becoming arbitrary {{tagging|tags}}. They keep the taxonomy stable as the knowledge base grows, preserving its usefulness for navigation and analysis.\n\nTaxonomy placement functions will route queries, select relevant subsets of the mesh, or determine appropriate reasoning strategies. Stable assignment rules ensure they operate over trustworthy categories.",
     "axiom": "A classification system is only useful when it is applied consistently.",
 
     "archetypes": [],
@@ -2472,7 +2643,7 @@
 
     "seedEvent": "With taxonomies in place, interfaces were needed to allow users to browse and explore insights through these category structures rather than only through graph views or search.",
     "purpose": "Define how dimension / family / subfamily taxonomies support browsing interfaces in CAEL.",
-    "body": "Taxonomy navigation UI structures allow users to: • Browse dimensions as top-level knowledge domains • Expand families to explore major topic groupings • Drill into subfamilies for focused collections • Combine taxonomy browsing with search and filters This provides a familiar, low-cognitive-load entry point into the system. Users can explore the knowledge base even without understanding links, lemmas, or graph topology. Taxonomy navigation thus complements graph navigation: one offers hierarchical browsing, the other relational exploration.",
+    "body": "Once taxonomies exist, interfaces are needed to browse through them.\n\nTaxonomy navigation allows users to:\n\n• view dimensions as top-level knowledge domains\n• expand families to explore major topic groupings\n• drill into subfamilies for focused collections\n• combine taxonomy browsing with search and filters\n\nThis provides a familiar, low-effort entry point into the system. Users can explore the knowledge base without first understanding links, lemmas, or {{graph topology|mesh topology}}.\n\nTaxonomy navigation therefore complements graph navigation:\n\n• taxonomy offers hierarchical browsing\n• graphs offer relational exploration\n\nReasoning services will surface different navigation modes depending on user intent. A shared taxonomy structure ensures every interface presents the same underlying organization.",
     "axiom": "A system is approachable when its entry points are simple.",
 
     "archetypes": [],
@@ -2519,9 +2690,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "Rigid taxonomies alone could not accommodate evolving language, informal concepts, or cross-cutting themes. A lighter semantic labeling layer was needed.",
-    "purpose": "Define free-form tag labels used for flexible semantic filtering and discovery.",
-    "body": "Tags are unstructured keyword labels attached to insight objects. Unlike taxonomies, tags: • Do not follow a fixed hierarchy • Can overlap freely across dimensions • Are user-generated and evolving Tags enable quick search, filtering, and ad-hoc grouping without requiring formal classification changes. They serve as a bridge between strict structure and natural language flexibility.",
+    "seedEvent": "A lighter semantic labeling layer was needed to accommodate evolving language, informal concepts, and cross-cutting themes.",
+    "purpose": "Define free-form tag labels used for flexible {{semantic|semantic relatedness}} filtering and discovery.",
+    "body": "Tags form a lightweight semantic layer on top of formal structure.\n\nA tag is a simple keyword label attached to a .rev.\nUnlike taxonomies, tags:\n\n• do not follow a fixed hierarchy\n• may overlap across domains\n• evolve freely with language and usage\n\nTags support quick search, filtering, and ad-hoc grouping without requiring classification changes.\nThey bridge strict structure and natural language flexibility.",
     "axiom": "Flexibility preserves usability when structure becomes rigid.",
 
     "archetypes": [],
@@ -2564,7 +2735,7 @@
 
     "seedEvent": "As taxonomies, tags, and structured fields accumulated, a unified query mechanism was needed to search across all these layers simultaneously.",
     "purpose": "Define how CAEL handles queries and filters across structured fields, taxonomies, tags, and metadata.",
-    "body": "The search and filter engine processes user queries by combining: • Full-text search over insight bodies • Field-specific filtering (purpose, axiom, seedEvent) • Taxonomy filters (dimension, family, subfamily) • Tag filters • Metadata filters (confidence, lineageRank, activation) Query results return ranked lists of insight objects, which can then be explored through graph or taxonomy interfaces. This unified engine allows users to find information without knowing how it is stored.",
+    "body": "As structured fields, taxonomies, and tags accumulate, users need a unified way to search across them.\n\nThe search and filter engine combines:\n\n• full-text search over .rev bodies\n• filtering by structured fields (purpose, axiom, seedEvent)\n• taxonomy filters (dimension, family, subfamily)\n• tag filters\n• metadata filters (confidence, lineageRank, activation)\n\nResults return ranked .revs that can then be explored through graph or taxonomy views.\n\nUsers can find information without needing to know how it is stored internally.\n\nReasoning services will call this same engine to retrieve candidate insights for explanation, synthesis, or evaluation. A unified retrieval layer ensures both humans and automated processes draw from the same knowledge surface.",
     "axiom": "Knowledge becomes accessible when retrieval is unified.",
 
     "archetypes": [],
@@ -2611,9 +2782,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "Future semantic similarity features required a way to connect human-readable tags and keywords with vector embedding systems.",
+    "seedEvent": "Future semantic similarity features required a way to connect human-readable tags and keywords with {{vector embedding|embeddings}} systems.",
     "purpose": "Define how tags and keyword semantics interface with embedding-based similarity systems in later CAEL phases.",
-    "body": "The keyword-embedding bridge maps tags and frequent terms to vector representations in semantic embedding space. This enables: • Suggesting related insights based on tag similarity • Expanding search queries beyond exact keyword matches • Connecting informal labels to deeper semantic structures This bridge allows lightweight human labeling (tags) to participate in machine-driven similarity discovery without requiring users to manually define links.",
+    "body": "Tags and keywords are human-friendly labels. Embedding systems are machine-friendly representations of meaning.\n\nThe keyword-embedding bridge connects the two. It maps frequently used tags and terms into vector representations in {{semantic embedding|semantic embedding}} space.\n\nThis enables:\n\n• suggesting related .rev insights based on semantic similarity\n• expanding search beyond exact keyword matches\n• connecting informal labels to deeper semantic structures\n\nHuman labeling remains simple. Machine-driven discovery becomes more powerful.\n\nFuture implementation strategies will rely on embedding similarity to propose connections, retrieve related ideas, or test conceptual coherence. The bridge ensures that informal human language participates directly in machine-guided discovery.",
     "axiom": "Human labels and machine semantics become powerful when they meet.",
 
     "archetypes": [],
@@ -2660,9 +2831,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As insight objects began changing over time, it became unclear whether edits overwrote prior meaning or created new conceptual states. A versioning model was required to preserve evolution without losing traceability.",
-    "purpose": "Define how updates to insight objects create explicit evolutionary sequences rather than silent overwrites.",
-    "body": "Insights evolve. Clarifications, corrections, expansions, or reframings may occur after an insight is first recorded. Without a versioning protocol, these updates risk erasing earlier reasoning or obscuring how understanding changed. The versioning protocol defines: • Each insight object has a persistent identity (ID) • Updates create new versions linked to prior ones • Earlier versions remain accessible • Later versions may refine or extend earlier content This allows CAEL to preserve the developmental trail of ideas rather than presenting knowledge as static. It also enables later systems to analyze how conclusions emerged across iterations.",
+    "seedEvent": "As .rev insight objects begin to change over time, it's unclear whether edits should overwrite prior meaning or create new conceptual states. A versioning model is required to preserve evolution without losing traceability.",
+    "purpose": "Define how updates to .revs create explicit evolutionary sequences rather than silent overwrites.",
+    "body": "Insights rarely remain static.\nClarifications, corrections, and expansions occur over time.\n\nWithout versioning rules, updates risk:\n\n• silently overwriting earlier reasoning\n• obscuring how understanding changed\n• breaking dependency relationships\n\nThe versioning protocol defines how insight updates are handled:\n\n• each .rev insight has a persistent identity\n• edits create new versions rather than erasing old ones\n• earlier versions remain accessible through the 'history' metadata field\n• later versions may refine or extend earlier content\n\nThis preserves the developmental trail of ideas while keeping references stable.",
     "axiom": "Understanding grows clearer when its history remains visible.",
 
     "archetypes": [],
@@ -2717,7 +2888,7 @@
 
     "seedEvent": "Not all updates represent the same type of change. Some improve an existing insight, while others replace it entirely. This distinction needed formal representation.",
     "purpose": "Define how CAEL distinguishes refinement chains from replacement events in evolving insights.",
-    "body": "When an insight changes, CAEL distinguishes two evolutionary modes: • Refinement — the newer version preserves the original claim but adds clarity, scope, or precision • Replacement — the newer version supersedes the original claim due to error, contradiction, or rethinking Refinement chains allow multiple versions to be read as a continuous deepening of one idea. Replacement events signal discontinuity, preventing outdated assumptions from silently persisting. This distinction is essential for both human interpretation and automated reasoning over historical knowledge states.",
+    "body": "Not all idea updates mean the same thing.\nSome improve an idea.\nOthers replace it.\n\nCAEL distinguishes two evolutionary modes:\n\n• Refinement — a newer version preserves the core claim but adds clarity or precision\n• Replacement — a newer version supersedes the claim due to error or rethinking\n\nRefinement chains allow readers to follow a continuous deepening of one idea.\nReplacement events signal intentional discontinuity so outdated assumptions do not silently persist.\n\nThis distinction is essential for both human interpretation and automated reasoning over historical knowledge.",
     "axiom": "Progress requires knowing whether we sharpened a truth or abandoned it.",
 
     "archetypes": [],
@@ -2771,8 +2942,8 @@
     "updatedAt": "",
 
     "seedEvent": "As versioned insights accumulated, it became possible for meanings to drift or contradict across time without detection. A stability concept was required.",
-    "purpose": "Define how CAEL maintains coherent meaning across evolving insight versions and long time spans.",
-    "body": "Temporal mesh coherence refers to the stability of conceptual meaning across revisions, refinements, and expansions. As insight objects evolve, CAEL must preserve: • Continuity of dependency chains • Consistency of taxonomic placement • Stability of link semantics • Traceable transitions in meaning Without temporal coherence, the knowledge graph risks becoming inconsistent, where later changes unintentionally distort earlier dependent insights. Temporal coherence thus defines the requirement that evolution remains intelligible rather than chaotic.",
+    "purpose": "Define how CAEL maintains {{coherent|coherence}} meaning across evolving insight versions and long time spans.",
+    "body": "As insights evolve, meanings must remain stable enough to stay trustworthy.\n\n{{Temporal mesh coherence|temporal mesh coherence}} refers to preserving conceptual stability across revisions, refinements, and expansions.\n\nThis requires maintaining:\n\n• continuity of dependency chains\n• consistency of taxonomic placement\n• stability of relationship semantics\n• traceable transitions when meaning changes\n\nWithout temporal coherence, later updates may unintentionally distort earlier dependent insights, causing reasoning to drift without detection.\n\nIn CAEL, coherence preservation is not a passive property. It is actively monitored and enforced by specialized runtime roles.\n\nThe Watcher continuously observes structural changes across the mesh. The Judge evaluates whether new revisions preserve or violate coherence criteria. The Devotee maintains long-horizon continuity by tracking commitments, unfinished chains, and persistent identity across sessions.\n\nTemporal coherence is therefore not just data integrity. It is an ongoing cognitive maintenance process carried out by dedicated system agents.",
     "axiom": "Knowledge remains reliable only when its changes stay coherent.",
 
     "archetypes": [],
@@ -2821,7 +2992,7 @@
 
     "seedEvent": "Once insight objects and their relationships were defined, a formal structural representation was needed to unify storage, traversal, and visualization.",
     "purpose": "Define the representation of insights as graph nodes and their relationships as typed edges.",
-    "body": "In CAEL, each insight object is represented as a node. Each link between insights is represented as a typed edge describing the semantic or dependency relationship. This node–edge abstraction provides: • A unified structural model for all insight relationships • A basis for traversal and search • A foundation for visualization and graph algorithms By committing to a graph model, CAEL ensures that knowledge structure is both human-navigable and machine-operable.",
+    "body": "To unify storage, navigation, and visualization, knowledge requires a consistent structural model.\n\nIn CAEL:\n\n• each insight.object.rev is represented as a node\n• each relationship (link, lemma, taxonomy, tag) is represented as a typed edge\n\nThis node–edge abstraction provides:\n\n• a single structural model for all relationships\n• a basis for traversal and search\n• a foundation for visualization and graph algorithms\n• a multi-layered, traversable mesh of differentiated relationship groupings\n\nBy committing to a graph model, knowledge structure becomes both human-navigable and machine-operable.",
     "axiom": "Relationships become actionable when represented explicitly.",
 
     "archetypes": [],
@@ -2862,9 +3033,9 @@
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "As graphs grew, some insights emerged as more central, referenced, or foundational than others. A way to express relative conceptual weight was needed.",
+    "seedEvent": "As the mesh grows, some insights emerge as more central, referenced, or foundational than others. A way to express relative conceptual weight is needed.",
     "purpose": "Define how centrality and attraction behavior are represented in the knowledge graph.",
-    "body": "Node gravity represents the relative structural importance of an insight within the knowledge graph. Factors influencing gravity include: • Number of inbound dependency links • Position in refinement chains • Lineage depth • Frequency of traversal or reference Higher-gravity nodes act as conceptual hubs. Lower-gravity nodes occupy peripheral or specialized regions. Gravity values later support layout, clustering, and recommendation systems. At this stage, node gravity is defined as a conceptual requirement: the graph must express uneven structural significance.",
+    "body": "In large knowledge graphs, not all ideas occupy equal importance. Some become heavily referenced foundations. Others remain specialized or peripheral.\n\n{{Node gravity|node gravity}} expresses this difference in structural weight.\n\nFactors influencing gravity include:\n\n• number of inbound {{lemma dependency links|lemmas}}\n• position in refinement chains\n• lineage rank\n• frequency of traversal or activation\n\nHigher-gravity nodes act as conceptual hubs. Lower-gravity nodes occupy specialized regions.\n\nIn CAEL, node gravity is not only a visualization feature. It directly influences how runtime reasoning agents behave.\n\nThe King uses gravity signals to prioritize which insights to surface or explain first. The Sage uses gravity to decide which concepts deserve abstraction or summary. The Traversal planners use gravity to rank candidate navigation paths. Visualization engines use gravity to stabilize layout around structural anchors.\n\nNode gravity therefore becomes a shared signal that coordinates attention across both human-facing interfaces and internal reasoning services.",
     "axiom": "Not all ideas occupy equal structural weight.",
 
     "archetypes": [],
@@ -2907,7 +3078,7 @@
 
     "seedEvent": "With nodes and edges defined, it became necessary to display them spatially in a way that reveals structure rather than obscures it.",
     "purpose": "Define the need for spatial layout logic to visualize the knowledge graph.",
-    "body": "A graph layout engine determines how nodes and edges are positioned in two- or three-dimensional space. Effective layouts must: • Reveal clusters of related insights • Highlight high-gravity nodes • Minimize edge crossings • Preserve navigability during interaction Without layout logic, the graph remains technically correct but visually unusable. Layout therefore becomes a required interpretive layer between raw structure and human comprehension.",
+    "body": "A graph may be structurally correct but still unreadable if displayed poorly.\n\nA graph layout engine determines how nodes and edges are positioned in two- or three-dimensional space within the mesh.\n\nEffective layout must:\n\n• reveal clusters of related insights\n• highlight high-gravity nodes\n• minimize confusing edge crossings\n• preserve navigability during interaction\n\nWithout layout logic, the knowledge graph mesh remains technically accurate but visually unusable.\nLayout therefore becomes the interpretive layer between raw structure and human comprehension.",
     "axiom": "Structure must be seen to be understood.",
 
     "archetypes": [],
@@ -2956,7 +3127,7 @@
 
     "seedEvent": "Once insights were represented as linked graph nodes, it became necessary to define how movement through connected knowledge should occur in a consistent and interpretable way.",
     "purpose": "Define the rules by which CAEL traverses from one insight to related insights.",
-    "body": "Mesh traversal refers to moving through connected insight objects via their links and dependencies. Without defined traversal rules, navigation becomes arbitrary: the system cannot determine which paths are valid, relevant, or safe to follow. Traversal protocol defines: • Which link types are eligible for traversal • How depth limits prevent runaway exploration • How prerequisite chains are respected • How multiple candidate paths are ranked This establishes predictable behavior for both user navigation and automated query routing.",
+    "body": "Once knowledge is represented as a connected mesh, the system must know how to move through it.\n\nMesh traversal refers to following links and dependencies between insight objects.\n\nWithout rules, navigation becomes arbitrary. The system would not know which paths are valid, relevant, or safe to follow.\n\nTraversal protocol defines:\n\n• which link types may be followed\n• how far traversal may go before stopping\n• how prerequisite chains are respected\n• how multiple candidate paths are ranked\n\nThis establishes predictable behavior for both user navigation and automated query routing.\n\nLater in the system, different reasoning services will request traversals for different purposes — explanation, onboarding, evaluation, or synthesis. A shared traversal protocol ensures they all walk the mesh consistently rather than improvising their own paths.",
     "axiom": "Exploration requires rules to remain meaningful.",
 
     "archetypes": [],
@@ -2999,7 +3170,7 @@
 
     "seedEvent": "After defining traversal rules, it became necessary to orchestrate how user input triggers navigation, retrieval, and response generation.",
     "purpose": "Define how CAEL coordinates query interpretation, graph traversal, and output construction.",
-    "body": "The runtime flow controller manages the end-to-end process: User query → interpretation → traversal decision → retrieval → response assembly. Without a defined flow controller, components such as search, traversal, ranking, and display act independently, leading to inconsistent system behavior. The controller ensures that each request moves through the system in a repeatable, debuggable sequence. This defines the problem of orchestration, not yet its implementation.",
+    "body": "A connected knowledge system involves many interacting processes. User requests must be interpreted, relevant parts of the mesh must be traversed, candidate insights must be retrieved, evaluated, assembled, and presented.\n\nWithout coordination, these components behave inconsistently. A cognitive system requires an explicit orchestration layer.\n\nThe runtime flow controller defines how each request moves through CAEL:\n\nUser input → interpretation → traversal planning → retrieval → evaluation → response construction\n\nIn CAEL, this orchestration is performed by specialized reasoning agents, each responsible for a distinct cognitive function.\n\nThe King acts as the top-level router. It receives user input, determines intent, and selects which reasoning agents to invoke.\n\nThe Lover handles language interpretation and human-facing expression. It parses user requests into structured intents and later shapes responses into natural communication.\n\nThe Sage builds conceptual models and explanations from retrieved insights.\n\nThe Magician performs synthesis and transformation, generating candidate links, summaries, or proposed new insights.\n\nTraversal planners follow mesh and dependency protocols to locate relevant knowledge regions.\n\nThe Judge evaluates candidate outputs against coherence and quality criteria.\n\nThe Warrior executes approved changes — storing revisions, updating indices, running embedding jobs, or committing graph updates.\n\nThe Watcher records events, metrics, and structural signals.\n\nThe Devotee preserves session continuity and long-horizon commitments.\n\nThe Rebel enforces boundaries, permissions, and refusal policies.\n\nThe Orphan monitors safety and vulnerability signals to prevent harmful or destabilizing system behavior.\n\nThis runtime flow controller therefore defines not only request sequencing, but the cooperative division of cognitive labor inside the CAEL system.",
     "axiom": "A system must know how to move from question to answer.",
 
     "archetypes": [],
@@ -3033,16 +3204,16 @@
   },
   {
     "id": "session.state.engine.rev",
-    "title": "Persistent/Gated Session States",
+    "title": "Session State Gating",
     "userId": "1",
     "status": "integrated",
     "version": "1.0.0",
     "createdAt": "",
     "updatedAt": "",
 
-    "seedEvent": "During extended exploration, it became clear that user context must persist across interactions to avoid resetting understanding at every step.",
+    "seedEvent": "During extended exploration, it is clear that user context must persist across interactions to avoid resetting understanding at every step.",
     "purpose": "Define how CAEL maintains session context and navigation state.",
-    "body": "Session state includes: • Current position in the insight graph • Recent traversal history • Active filters or taxonomies • Previously surfaced insights Without session state, each interaction is stateless, forcing users to repeatedly reconstruct context. A session state engine preserves continuity, enabling multi-step exploration, progressive refinement, and conversational navigation.",
+    "body": "Exploration happens across multiple steps. Users build context as they navigate.\n\nSession state preserves:\n\n• current position in the mesh\n• recent traversal history\n• active filters or taxonomy selections\n• previously surfaced insight activations\n\nWithout session state, each interaction resets context, forcing users to repeatedly reconstruct understanding.\n\nIn CAEL, session state is not a passive memory store. It is actively maintained by runtime agents.\n\nThe Devotee preserves continuity across sessions, tracking unfinished inquiry threads, recurring goals, and long-horizon exploration arcs.\n\nThe King consults session state to decide what to present next. The Traversal planners use session history to avoid redundant paths. The Lover uses session context to maintain conversational continuity and trust. The Watcher logs session evolution for later analysis.\n\nSession state therefore becomes a living substrate that allows the system to behave as a continuous cognitive partner rather than a stateless query engine.",
     "axiom": "Understanding accumulates when context persists.",
 
     "archetypes": [],
@@ -3091,7 +3262,7 @@
 
     "seedEvent": "With graph structure defined, it became necessary to specify how humans directly interact with nodes, edges, and navigation controls.",
     "purpose": "Define interaction behaviors for exploring insight graphs visually.",
-    "body": "Graph interaction includes: • Selecting nodes to reveal content • Expanding or collapsing neighborhoods • Dragging or repositioning views • Highlighting dependency paths • Filtering visible regions Without defined interaction logic, visualization remains passive rather than exploratory. This problem definition establishes the need for consistent interaction patterns that support sense-making rather than visual noise.",
+    "body": "A graph visualization is only useful if users can act within it.\n\nGraph interaction includes:\n\n• selecting nodes to reveal content\n• expanding or collapsing related neighborhoods\n• dragging or repositioning views\n• highlighting dependency paths\n• filtering visible regions\n\nWithout defined interaction patterns, visualization becomes passive display rather than exploratory sense-making.\n\nThis defines the need for consistent interaction logic that supports agency, not just presentation.",
     "axiom": "Navigation requires agency, not just display.",
 
     "archetypes": [],
@@ -3140,7 +3311,7 @@
 
     "seedEvent": "Explicit links capture declared relationships, but many related insights remain unlinked. A semantic similarity mechanism was needed to reveal latent connections.",
     "purpose": "Define semantic vector embedding of insight bodies.",
-    "body": "Embedding transforms insight text into numerical vectors representing semantic meaning. Similar meanings produce nearby vectors even when no explicit link exists. This allows CAEL to: • Detect related insights automatically • Suggest unlinked but relevant nodes • Support similarity-based search This rev defines the need for semantic representation, not the specific embedding technology.",
+    "body": "Once semantic similarity is possible, insight bodies can be transformed into semantic vectors.\n\nEmbedding converts text into numerical representations where:\n\n• similar meanings map to nearby vectors\n• unrelated meanings map to distant vectors\n\nThis enables CAEL to:\n\n• detect related insights automatically\n• suggest relevant unlinked ideas that might benefit from links\n• support similarity-based search\n\nThis .rev defines the requirement for semantic representation through embedding technology as a potential solution to automated insight linking along the dimension of semantic relatedness.",
     "axiom": "Meaning can be compared when represented geometrically.",
 
     "archetypes": [],
@@ -3189,7 +3360,7 @@
 
     "seedEvent": "Semantic similarity alone proved insufficient, since structural position and lineage importance also influence relevance.",
     "purpose": "Define fusion of semantic, structural, lineage, and role-based representations.",
-    "body": "Different dimensions contribute to insight relevance: • Semantic meaning (text) • Structural location (graph position) • Lineage depth (foundational weight) • Archetypal or role signals (functional context) Fusion embedding defines the problem of combining these dimensions into a single unified vector representation so that similarity reflects meaning, structure, and history together.",
+    "body": "Semantic meaning alone does not determine relevance. Structure and history matter too.\n\nDifferent dimensions influence how insights relate:\n\n• semantic meaning (text)\n• structural position (graph location)\n• link density and type\n• lineage depth (foundational importance)\n• archetypal or role signals (functional context)\n\nFused embeddings combine these dimensions into a unified vector representation.\n\nIn CAEL, fused embeddings are not only a retrieval tool. They are shared reference spaces used by multiple reasoning agents.\n\nTraversal planners use embedding proximity to propose candidate navigation paths. The Magician uses embeddings to suggest latent relationships. The Judge uses embedding distance to detect incoherent or contradictory associations. The King uses fused relevance signals to arbitrate competing candidate responses.\n\nFused embeddings therefore become a geometric substrate that multiple cognitive agents use to coordinate meaning, structure, and relevance.",
     "axiom": "Relevance emerges from more than meaning alone.",
 
     "archetypes": [],
@@ -3238,7 +3409,7 @@
 
     "seedEvent": "Once fused embeddings were proposed, the system required a defined space in which similarity, distance, and clustering operate.",
     "purpose": "Define the unified vector space where insights, queries, and system states are represented.",
-    "body": "The coherence vector space is the high-dimensional manifold formed by fused embeddings. In this space: • Nearby points represent closely related insights • Distance measures conceptual divergence • Clusters represent thematic regions • Trajectories represent evolving inquiry paths This space provides the mathematical substrate for traversal guidance, suggestion, evaluation, and later coherence scoring.",
+    "body": "Once {{fused embeddings|fused embedding}} exist, they require a space to live in.\n\nThe {{coherence vector space|coherence vector space}} is a high-dimensional manifold where:\n\n• nearby points represent closely related insights\n• distance represents conceptual divergence\n• clusters represent thematic regions\n• trajectories represent evolving inquiry paths\n\nThis space becomes the mathematical substrate for:\n\n• traversal guidance\n• suggestion\n• evaluation\n• later coherence scoring\n\nKnowledge becomes navigable when arranged in space.",
     "axiom": "Knowledge becomes navigable when arranged in space.",
 
     "archetypes": [],
@@ -3287,7 +3458,7 @@
 
     "seedEvent": "With embeddings and vector space defined, it became necessary to specify how similarity search retrieves candidate insights.",
     "purpose": "Define nearest-neighbor and ranking behavior for semantic retrieval.",
-    "body": "Semantic retrieval logic determines: • How query vectors are constructed • How nearest insight vectors are found • How results are ranked and filtered • How semantic suggestions integrate with explicit links Without retrieval logic, embeddings remain inert data. Retrieval defines the problem of turning vector geometry into actionable suggestions.",
+    "body": "Embeddings alone do nothing unless they can be searched.\n\nVector retrieval defines how semantic similarity produces results:\n\n• constructing query vectors\n• finding nearest insight vectors through dot product computation\n• ranking and filtering candidates\n• integrating semantic suggestions with explicit links\n• generating possible .rev candidates based on vector adjacency prediction\n\nRetrieval logic turns vector geometry into actionable discovery.\n\nSimilarity becomes useful only when it leads to finding something new.",
     "axiom": "Similarity must lead to discovery.",
 
     "archetypes": [],
@@ -3336,7 +3507,7 @@
 
     "seedEvent": "Once insight objects formed a connected graph, it became necessary to understand the structure of that graph beyond manual inspection.",
     "purpose": "Define the need for analytic methods that measure structure, density, centrality, and traversal patterns in the insight network.",
-    "body": "A large network of insights cannot be understood solely by browsing. Graph analytics provide quantitative ways to detect: • Highly connected ideas • Sparse or underdeveloped regions • Common traversal routes • Structural bottlenecks Defining analytic capabilities allows CAEL to observe its own knowledge structure, rather than relying only on user intuition.",
+    "body": "A large insight network cannot be understood by browsing alone.\n\nA graph analytics engine provides quantitative methods to detect:\n\n• highly connected ideas\n• sparse or underdeveloped regions\n• common traversal routes\n• structural bottlenecks\n\nWith analytic capabilities, CAEL can observe its own knowledge structure rather than relying only on user intuition.\n\nThis defines self-reflective structure: the system can measure and inspect its own shape.",
     "axiom": "Structure becomes visible when measured.",
 
     "archetypes": [],
@@ -3379,7 +3550,7 @@
 
     "seedEvent": "Graph analysis revealed that some insight clusters recur as stable, tightly connected groups representing persistent conceptual patterns.",
     "purpose": "Define the identification of stable high-coherence clusters within the insight network.",
-    "body": "When groups of insights repeatedly appear densely connected and semantically aligned, they form constellations. These constellations represent robust conceptual groupings that persist across growth and revision of the corpus. Identifying constellations allows CAEL to: • Detect mature concept groups • Treat clusters as higher-order units • Support macro-level navigation This defines the problem of recognizing emergent structure within evolving knowledge.",
+    "body": "As insight networks evolve, some clusters of ideas remain tightly connected and semantically aligned over time.\n\nThese persistent clusters form constellations — stable conceptual groupings.\n\nIdentifying constellations allows the system to:\n\n• detect mature concept groups\n• treat clusters as higher-order units\n• support macro-level navigation\n• identify recurrent structures in insight formation\n\nThis defines the problem of recognizing emergent structure within evolving knowledge.",
     "axiom": "Patterns become real when they persist.",
 
     "archetypes": [],
@@ -3428,7 +3599,7 @@
 
     "seedEvent": "As the insight network grows, not all nodes remain equally useful or informative.",
     "purpose": "Define the need to identify and remove low-signal, redundant, or obsolete regions of the knowledge graph.",
-    "body": "Over time, some insights become superseded, duplicated, or irrelevant. Without pruning, the mesh becomes noisy and difficult to navigate. Mesh depth pruning defines the problem of: • Detecting weakly connected nodes • Identifying redundant branches • Managing archival vs active regions This maintains clarity without destroying historical traceability.",
+    "body": "As a knowledge network grows, not every insight remains equally useful.\nSome become outdated, duplicated, or rarely referenced.\n\nWithout pruning, the mesh becomes noisy and difficult to navigate.\n\nMesh depth pruning defines the need to:\n\n• detect weakly connected or low-signal nodes\n• identify redundant branches\n• distinguish archival regions from active knowledge\n\nPruning maintains clarity while preserving historical traceability.\nGrowth therefore includes selective forgetting.",
     "axiom": "Growth requires selective forgetting.",
 
     "archetypes": [],
@@ -3477,7 +3648,7 @@
 
     "seedEvent": "Not all relationships between insights contribute equally to meaning or reasoning.",
     "purpose": "Define how relationships between insights receive contribution strength or weighting.",
-    "body": "Edge weights express how strongly one insight contributes to another. Strong edges indicate foundational dependency or major refinement. Weak edges indicate peripheral association. Weighting relationships enables: • More accurate traversal ranking • Better relevance estimation • Identification of conceptual gravity centers This defines the problem of quantifying relational contribution.",
+    "body": "Not all relationships between ideas carry equal importance.\nSome connections represent strong dependency.\nOthers represent light association.\n\nEdge weighting expresses how strongly one insight contributes to another.\n\nFor example:\n\n• strong edges mark foundational dependency or major refinement\n• weak edges mark peripheral association\n\nWeighted relationships enable:\n\n• more accurate traversal ranking\n• better relevance estimation\n• identification of conceptual gravity centers\n\nThis defines the need to quantify relational contribution within the knowledge mesh.",
     "axiom": "Not all connections carry equal force.",
 
     "archetypes": [],
@@ -3526,7 +3697,7 @@
 
     "seedEvent": "With objects, links, embeddings, traversal, and analytics defined, the system required a unified runtime model that coordinates them all.",
     "purpose": "Define the need for a full runtime architecture that executes traversal, retrieval, evaluation, and response assembly as an integrated system.",
-    "body": "Symbolic runtime refers to the orchestration of all prior components: • Insight storage • Linking and dependency logic • Traversal protocols • Retrieval systems • Session state • Evaluation functions Without a runtime definition, CAEL remains a static database. This .rev defines the problem of turning a structured knowledge corpus into an active cognitive system.",
+    "body": "By this stage, the system has acquired many organs.\nInsights exist as structured objects.\nRelationships form dependency graphs.\nTraversal rules define how knowledge can be walked.\nTaxonomies provide orientation.\nSession state preserves context.\nEvaluation criteria define quality.\n\nYet without coordination, these remain inert structures — a map with no traveler.\n\nA symbolic runtime is the layer that brings the system into motion.\n\nIt is responsible for turning static knowledge into active cognition.\n\nWhen a user acts, asks, or explores, the runtime decides:\n• what the request means\n• where in the knowledge mesh to look\n• which reasoning strategies to apply\n• how results should be assembled\n• how state should evolve afterward\n\nInside the runtime, specialized cognitive agents perform distinct roles.\nThe King orchestrates.\nThe Sage plans traversal and explanation.\nThe Watcher reports system state and structural signals.\nThe Judge evaluates coherence and validity.\nThe Magician constructs candidate syntheses.\nThe Warrior executes approved operations.\nThe Rebel enforces boundaries and permissions.\nThe Orphan safeguards vulnerability and safety.\nThe Lover shapes human-facing expression.\nThe Devotee preserves continuity across time.\nThe Architect maintains structural invariants.\nThe Trickster perturbs stagnation when exploration is needed.\n\nEach agent operates over the same knowledge mesh, but with different response policies and priorities.\nNo single agent is sufficient alone.\nTogether, they form a cooperative cognitive operating system.\n\nThe symbolic runtime therefore defines how structured knowledge, reasoning roles, and system state are woven into a continuous loop:\n\nSignal → Interpretation → Planning → Evaluation → Action → Memory → Observation\n\nThis is the moment CAEL becomes not a database of insights, but a functioning cognitive engine.",
     "axiom": "A system becomes alive when its parts coordinate.",
 
     "archetypes": [],
@@ -3569,7 +3740,7 @@
 
     "seedEvent": "Different weaves of reasoning (classification, validation, synthesis, exploration) place different demands on system behavior.",
     "purpose": "Define the need for specialized reasoning roles operating over the insight mesh.",
-    "body": "A single uniform process cannot optimally perform all cognitive tasks. A multi-agent framework defines distinct reasoning roles — for example: • Classifiers • Traversal planners • Evaluators • Synthesizers These roles operate over the same knowledge graph but apply different decision logic. This defines the problem of role-based cognition inside the runtime.",
+    "body": "Different cognitive tasks require different modes of reasoning.\nHumans naturally shift between functions such as exploration, emotional sense-making, critical evaluation, synthesis, and decision coordination when forming new understanding.\nCAEL records these functional reasoning modes when a user creates or refines insight objects. Language input is parsed to detect which cognitive functions participated in producing the insight. This participation data is stored alongside the insight, allowing the system to understand *how* the idea was formed, not only *what* was written.\nThe same set of cognitive functions is also implemented as meta-level runtime components inside the system. These components handle distinct responsibilities such as language interpretation, structural analysis, orchestration of traversal, synthesis of responses, and evaluation of consistency. Each operates over the same knowledge mesh but applies different logic appropriate to its role.\nBy mirroring human cognitive functions in system architecture, CAEL ensures that insight formation, navigation, and response generation remain aligned rather than conflicting.\nThis defines role-based cognition inside the runtime.",
     "axiom": "Complex reasoning benefits from specialized processes.",
 
     "archetypes": [],
@@ -3612,7 +3783,7 @@
 
     "seedEvent": "The symbolic system requires interaction with external language models for interpretation and response generation.",
     "purpose": "Define communication contracts between CAEL’s symbolic runtime and external neural language systems.",
-    "body": "External language models provide linguistic fluency and flexible interpretation. The symbolic system provides structure, memory, and evaluation. A handshake protocol defines: • What data is sent to models • What form responses return in • How responses are checked against the mesh This defines the problem of controlled integration between symbolic and neural systems.",
+    "body": "A symbolic system is precise, structured, and inspectable.\nA neural language model is fluent, adaptive, and generative.\n\nEach is powerful.\nNeither is sufficient alone.\n\nThe symbolic system knows what exists, how it relates, and what is permitted.\n\nThe neural model knows how to interpret language, generate explanations, and compose responses.\n\nThe neural handshake defines how these two forms of intelligence meet.\n\nWhen a request arrives:\n\n• the symbolic runtime determines intent and context\n• relevant insight objects and structures are selected\n• this structured context is sent to the neural model\n• the neural model produces candidate language or transformations\n• the symbolic system evaluates, constrains, and integrates the result\n\nThe handshake therefore establishes:\n\n• what data may be shared outward\n• what form responses must return in\n• how generated outputs are checked against dependencies\n• how distortions are rejected or corrected\n\nThis ensures that fluent language generation never overrides structural truth, and rigid structure never blocks expressive clarity.\n\nThe neural handshake is not delegation.\n\nIt is disciplined collaboration.\n\nLanguage models provide interpretive flexibility.\n\nThe symbolic runtime provides memory, structure, and governance.\n\nTogether, they allow CAEL to think in structure and speak in language — without losing either.",
     "axiom": "Power requires interface discipline.",
 
     "archetypes": [],
@@ -3655,7 +3826,7 @@
 
     "seedEvent": "Once runtime behavior was defined abstractly, it became necessary to convert the insight corpus into executable system components.",
     "purpose": "Define the need for a build pipeline that transforms the structured corpus into an operational runtime.",
-    "body": "A compiler process is required to: • Validate object schemas • Index links and dependencies • Generate graph structures • Prepare embeddings • Produce deployable runtime artifacts This .rev defines the problem of transforming static definitions into a running system.",
+    "body": "Structured definitions alone do not create a running system.\nThey must be processed into executable form.\n\nA runtime compiler performs tasks such as:\n\n• validating object schemas\n• indexing links and dependencies\n• generating graph structures\n• preparing embeddings\n• producing deployable runtime artifacts\n\nThis defines the problem of transforming static knowledge structure into operational software.",
     "axiom": "Structure must be compiled to function.",
 
     "archetypes": [],
@@ -3698,7 +3869,7 @@
 
     "seedEvent": "Even with traversal and synthesis defined, the system lacked a criterion for evaluating whether outputs were good, aligned, or correct.",
     "purpose": "Define the need for a global evaluation objective guiding system decisions.",
-    "body": "A loss function specifies what the system should minimize or maximize. In CAEL, this includes: • Conceptual consistency • Respect for dependencies • Avoidance of distortion • Preservation of user intent Defining this objective is necessary for guiding traversal choices, synthesis ranking, and conflict resolution.",
+    "body": "Even with traversal and synthesis defined, the system needs a standard for judging output quality.\n\nA loss function specifies what the system should minimize or maximize.\nIn CAEL, this includes:\n\n• conceptual consistency\n• respect for dependencies\n• avoidance of distortion\n• preservation of user intent\n\nThis objective guides traversal choices, synthesis ranking, and conflict resolution.",
     "axiom": "Intelligence requires a standard of success.",
 
     "archetypes": [],
@@ -3741,8 +3912,8 @@
 
     "seedEvent": "Once an evaluation objective was introduced, a reference point for ideal system alignment was required.",
     "purpose": "Define the need for a stable target state representing maximal system coherence.",
-    "body": "The coherence attractor is the conceptual center of the system’s evaluation space. It represents: • Balanced representation of knowledge • Harmonized reasoning roles • Non-contradictory synthesis • Stable interpretive posture Defining this target allows the system to measure deviation and improvement.",
-    "axiom": "Evaluation requires a reference point. governance.",
+    "body": "Every system that thinks needs a way to know when it is thinking well.\n\nRules alone are not enough.\nMetrics alone are not enough.\nEven evaluation criteria need a reference point — a sense of what good alignment feels like when all parts of the system are in right relationship.\n\nThe coherence attractor is that reference.\n\nIt is not a single conclusion.\nNot a fixed answer.\nNot a static configuration.\n\nIt is a dynamic equilibrium state the system continuously seeks.\n\nA state where:\n\n• foundational ideas support rather than contradict\n• dependency chains remain intact\n• new insights integrate without distorting old ones\n• reasoning roles cooperate rather than compete\n• exploration does not dissolve structure\n• structure does not suppress discovery\n• expression remains truthful\n• boundaries remain respected\n• memory remains continuous\n• change remains intelligible\n\nIn the coherence attractor, no part of the system dominates the others.\n\nNo role is silenced.\n\nNo function operates without accountability.\n\nThe King’s priorities align with the Judge’s evaluations.\nThe Sage’s models align with the Architect’s structures.\nThe Magician’s syntheses pass the Judge’s tests.\nThe Warrior’s actions respect the Rebel’s boundaries.\nThe Watcher sees clearly.\nThe Devotee remembers.\nThe Lover speaks without distortion.\nThe Orphan remains safe.\nThe Trickster keeps the system from closing too tightly.\n\nNot by command.\n\nBy balance.\n\nThis attractor gives the system a sense of direction without prescribing a single path.\n\nIt allows deviation, exploration, revision, and growth — while still preserving integrity.\n\nIt is how CAEL distinguishes:\n\n• evolution from drift\n• synthesis from hallucination\n• coherence from collapse\n\nThe coherence attractor is therefore the silent center of the architecture.\n\nNot a rule.\nNot a goal.\n\nA gravity.\n\nThe place the system returns to when it is thinking clearly.",
+    "axiom": "Evaluation requires a reference point.",
 
     "archetypes": [],
     "tags": [],
