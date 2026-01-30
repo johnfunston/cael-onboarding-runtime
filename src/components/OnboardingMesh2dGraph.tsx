@@ -346,7 +346,7 @@ const OnboardingMesh2dGraph: React.FC<OnboardingMesh2dGraphProps> = ({
   };
 
   return (
-    <div className="mesh-topology-container" style={{ backgroundColor: "#20324e" }}>
+    <div className="mesh-topology-container" style={{ background: "#111" }}>
       <ForceGraph2D<NodeObject<GraphNode>, GraphLink>
         ref={graphRef}
         graphData={{ nodes, links }}

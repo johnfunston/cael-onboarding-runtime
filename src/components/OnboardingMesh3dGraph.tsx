@@ -120,15 +120,15 @@ const LINK_TYPE_COLOR: Record<string, string> = {
 };
 
 const DIMENSION_COLOR: Record<DimensionKey, string> = {
-  GENESIS: "rgba(238, 246, 89, 0.95)",
-  FOUNDATIONS: "rgba(255, 255, 255, .95)",
-  UNITS: "rgba(255, 140, 140, 0.9)",
-  RELATIONSHIPS: "rgba(180, 140, 255, 0.9)",
-  STRUCTURE: "rgba(120, 200, 255, 0.9)",
-  TRAVERSAL_AND_NAVIGATION: "rgba(255, 180, 90, 0.9)",
-  EVALUATION: "rgba(90, 255, 180, 0.9)",
-  RUNTIME_AND_USAGE: "rgba(255, 255, 255, 0.75)",
-  OUTCOMES: "rgba(255, 215, 90, 0.9)",
+  GENESIS: "#3f8051",
+  FOUNDATIONS: "#844787",
+  UNITS: "#67b8a4",
+  RELATIONSHIPS: "#b48cff",
+  STRUCTURE: "#78c8ff",
+  TRAVERSAL_AND_NAVIGATION: "#ffb45a",
+  EVALUATION: "#4e4c99",
+  RUNTIME_AND_USAGE: "#971d1d",
+  OUTCOMES: "#cc58a2",
 };
 
 function withAlpha(rgba: string, alpha: number): string {

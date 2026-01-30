@@ -19,13 +19,14 @@ import ViewsToggleButton, {
 } from "../components/ViewsToggleButton";
 
 import GENESIS_ICON from "/assets/genesis-icon.png";
-import OUTCOMES_ICON from "/assets/proposal-icon.png";
-import TRAVERSAL_NAV_ICON from "/assets/navigation-ui-icon.png";
-import EVALUATION_ICON from "/assets/analytics-engine-icon.png";
-import RELATIONSHIPS_ICON from "/assets/classification-layer-icon.png";
-import UNITS_ICON from "/assets/graph-structure-icon.png";
-import STRUCTURE_ICON from "/assets/semantic-vector-icon.png";
-import RUNTIME_USAGE_ICON from "/assets/runtime-architecture-icon.png";
+import FOUNDATIONS_ICON from "/assets/foundations-icon.png"
+import OUTCOMES_ICON from "/assets/outcomes-icon.png";
+import TRAVERSAL_NAV_ICON from "/assets/traversal-icon.png";
+import EVALUATION_ICON from "/assets/evaluation-icon.png";
+import RELATIONSHIPS_ICON from "/assets/relationships-icon.png";
+import UNITS_ICON from "/assets/units-icon.png";
+import STRUCTURE_ICON from "/assets/structure-icon.png";
+import RUNTIME_USAGE_ICON from "/assets/runtime-icon.png";
 
 type RevId = string;
 type LineageRank = number;
@@ -195,6 +196,7 @@ const OUTCOMES: RevId[] = [
 
 const iconSrcByDimension: Partial<Record<DimensionKey, string>> = {
   GENESIS: GENESIS_ICON,
+  FOUNDATIONS: FOUNDATIONS_ICON,
   UNITS: UNITS_ICON,
   RELATIONSHIPS: RELATIONSHIPS_ICON,
   STRUCTURE: STRUCTURE_ICON,

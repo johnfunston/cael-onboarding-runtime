@@ -56,7 +56,7 @@
 .rank-button {
     height: 46px;
     width: 136px;
-    background-color: rgba(90, 255, 180, 0.66);
+    background-color: #3f8051;
     color: white;
     border-style: none;
     border: 1px solid white;
@@ -80,7 +80,7 @@
 .sequential-button {
     height: 46px;
     width: 136px;
-    background-color: rgba(180, 140, 255, 0.75);
+    background-color: rgba(180, 140, 255, 0.9);
     color: white;
     border-style: none;
     border: 1px solid white;
