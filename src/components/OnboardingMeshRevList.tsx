@@ -62,15 +62,15 @@ type OnboardingMeshRevListProps = {
 };
 
 const DIMENSION_COLOR: Record<DimensionKey, string> = {
-  GENESIS: "rgba(238, 246, 89, 0.95)",
-  FOUNDATIONS: "rgba(255, 255, 255, .9)",
-  UNITS: "rgba(255, 140, 140, 0.9)",
+  GENESIS: "rgba(63, 128, 81, 0.95)",
+  FOUNDATIONS: "rgba(132, 71, 135, 0.9)",
+  UNITS: "rgba(103, 184, 164, 0.9)",
   RELATIONSHIPS: "rgba(180, 140, 255, 0.9)",
   STRUCTURE: "rgba(120, 200, 255, 0.9)",
   TRAVERSAL_AND_NAVIGATION: "rgba(255, 180, 90, 0.9)",
-  EVALUATION: "rgba(90, 255, 180, 0.9)",
-  RUNTIME_AND_USAGE: "rgba(255, 255, 255, 0.75)",
-  OUTCOMES: "rgba(255, 215, 90, 0.9)",
+  EVALUATION: "rgba(39, 38, 95, 0.9)",
+  RUNTIME_AND_USAGE: "rgba(207, 82, 82, 0.75)",
+  OUTCOMES: "rgba(155, 152, 57, 0.9)",
 };
 
 const GROUP_LIST_STYLE: React.CSSProperties = { marginTop: 12 };
@@ -137,14 +137,13 @@ const OnboardingMeshRevList: React.FC<OnboardingMeshRevListProps> = ({
       className={`rev-list ${isOpen ? "is-open" : "is-closed"}`}
       data-open={isOpen ? "true" : "false"}
     >
-      <button
-        type="button"
-        className="rev-list-toggle-button"
+      <div
+        className={isOpen ? "rev-list-toggle-button" : "rev-list-toggle-button-closed"}
         onClick={toggleIsOpen}
         aria-pressed={!isOpen}
         aria-label={isOpen ? "Close rev list" : "Open rev list"}
         title={isOpen ? "Close" : "Open"}
-      />
+      ><img className={isOpen ? 'rev-list-toggle-button-icon' : 'rev-list-toggle-button-icon-closed'} src={isOpen ? "/assets/arrow-left-white.png" : "/assets/search-icon-white.png" } alt="" /></div>
 
       {/* Search */}
       <SearchBar

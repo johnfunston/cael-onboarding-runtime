@@ -73,7 +73,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
           aria-expanded={isOpen}
           title={`Search fields (${enabledCount})`}
         >
-          <img src="/assets/eye-icon-white.png" alt="" />
+          <img src="/assets/filter-icon-white.png" alt="" />
         </button>
       </div>
 
@@ -106,6 +106,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
               return (
                 <label key={key} className="search-filter-option">
                   <input
+                  className='search-filter-option-radio-button'
                     type="checkbox"
                     checked={checked}
                     onChange={(e) =>
